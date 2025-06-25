@@ -1,0 +1,90 @@
+@import '../../parameters';
+
+.Button {
+  background: transparent;
+  border: 1px $baseColor solid;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 11px 33px;
+  justify-items: center;
+  align-items: center;
+
+  p {
+    color: $baseColor;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+.Overlay {
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100w;
+  height: 100vh;
+  z-index: 999;
+}
+
+
+.Form {
+  z-index: 1000;
+  align-self: anchor-center;
+  justify-self: center;
+  position: absolute;
+  width: 440px;
+  opacity: 1;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 40px;
+  border-radius: 40px;
+
+  h1 {
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    input {
+      background-color: $bgColor;
+      padding: 12px 16px;
+      border: none;
+      border-radius: 8px;
+      color: $txtColor;
+      font-weight: 400;
+      opacity: 0.6;
+      outline: none;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+
+    button {
+      width: stretch;
+      height: 49px;
+      border: none;
+      border-radius: 8px;
+      color: #FFFFFF;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    &__cancel {
+      background-color: #1E1E1E;
+    }
+
+    &__add {
+      background-color: $baseColor;
+    }
+
+  }
+}

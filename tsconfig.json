@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "downlevelIteration": true,
+    "useDefineForClassFields": true,
+    "baseUrl": "src",
+    "experimentalDecorators": true,
+    "noUncheckedIndexedAccess": false,
+    "types": ["vite/client", "vite-plugin-svgr/client"]
+  },
+  "include": [
+    "src",
+    "node_modules/@types/node/globals.global.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".eslintrc.cjs"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

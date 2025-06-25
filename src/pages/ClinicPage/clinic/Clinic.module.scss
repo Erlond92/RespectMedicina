@@ -1,0 +1,32 @@
+@import '../../parameters';
+
+.Clinic {
+  width: stretch;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    padding: 7.5px 12px;
+
+    h2 {
+      font-weight: 600;
+      font-size: 13px;
+      color: $txtColor;
+    }
+    p {
+      font-weight: 400;
+      font-size: 12px;
+      color: $txtColor;
+    }
+  }
+
+  button {
+    border: none;
+    background: transparent;
+  }
+
+}

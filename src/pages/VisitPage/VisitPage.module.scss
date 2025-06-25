@@ -1,0 +1,47 @@
+@import '../parameters';
+
+.PacientPage {
+  width: stretch;
+  height: stretch;
+  border-radius: 24px;
+  padding: 24px;
+  background-color: #FFFFFF;
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    h1 {
+      align-content: center;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 100%;
+    }
+
+    .Search {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 16px;
+    }
+  }
+}
+
+.Table {
+  width: stretch;
+
+  thead {
+    background-color: $bgColor;
+    th {
+      padding: 12px;
+      color: $txtColor;
+      font-weight: 600;
+      font-size: 12px;
+      opacity: 0.6;
+      text-transform: uppercase;
+      line-height: 12px;
+    }
+  }
+}
