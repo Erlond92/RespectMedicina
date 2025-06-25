@@ -31,6 +31,7 @@ export const AddPacient = () => {
         const form = (e.target as HTMLFormElement).form;
         const formData = Object.fromEntries(new FormData(form));
         distpach(clinicList.actions.addClinic({
+            id: Date.now().toString(),
             name: (typeof formData.name == 'string') ? formData.name : '',
             address: (typeof formData.address == 'string' && typeof formData.city == 'string') ? `${formData.city}, ${formData.address}`: ''
         }))
