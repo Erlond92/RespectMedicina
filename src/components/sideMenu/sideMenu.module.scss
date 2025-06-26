@@ -3,8 +3,10 @@
 .sideMenu {
   display: flex;
   flex-direction: column;
-  gap: 48px;
-  width: 257px;
+  gap: 24px;
+  max-width: 305px;
+  width: 100%;
+  flex-shrink: 0;
   height: calc(100vh - 96px);
   padding: 24px;
   border-radius: 24px;
@@ -12,6 +14,11 @@
 
   * {
     background-color: #FFFFFF;
+  }
+
+  & > *:not(:last-of-type) {
+    padding-bottom: 24px;
+    border-bottom: 2px solid #F9F9FB;
   }
 }
 
@@ -21,25 +28,36 @@
   gap: 16px;
 
   &__line {
-    list-style-type: none;
+    width: 100%;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: start;
+    align-items: center;
+    border: none;
+    transition: all .5s;
+    border-radius: 360px;
+    
+    &:hover {
+      background-color: #F9F9F9;
+    }
+  
+    p {
+      color: $txtColor;
+      font-size: 16px;
+    }
   }
 }
 
-.Button {
-  width: 100%;
-  padding: 10px 12px;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  justify-content: start;
-  align-items: center;
-  border: none;
-  opacity: 0.5;
 
-  p {
-    color: $txtColor;
-    font-size: 16px;
-  }
+.Logo {
+  padding-bottom: 24px;
+  border-bottom: 2px solid #F9F9FB;
+}
+
+.Logo img {
+  width: 100%;
 }
 
 .Users {

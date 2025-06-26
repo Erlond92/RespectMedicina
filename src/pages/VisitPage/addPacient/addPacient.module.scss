@@ -1,7 +1,7 @@
 @import '../../parameters';
 
 .Button {
-  background: transparent;
+  background-color: transparent;
   border: 1px $baseColor solid;
   border-radius: 8px;
   display: flex;
@@ -18,11 +18,14 @@
   }
 }
 .Overlay {
-  position: absolute;
-  left: 0; right: 0; top: 0; bottom: 0;
+  position: fixed;
+  inset:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
-  width: 100w;
-  height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
   z-index: 999;
 }
 
@@ -45,10 +48,6 @@
     text-align: center;
   }
 
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
 
     input {
       background-color: $bgColor;
@@ -60,22 +59,22 @@
       opacity: 0.6;
       outline: none;
     }
-  }
 
   &__buttons {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
     gap: 16px;
 
     button {
-      width: stretch;
-      height: 49px;
+      width:100%;
+      min-height: 49px;
       border: none;
       border-radius: 8px;
       color: #FFFFFF;
       font-size: 16px;
       font-weight: 500;
+      padding: 13px;
     }
 
     &__cancel {
@@ -87,4 +86,10 @@
     }
 
   }
+}
+
+.Inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }

@@ -1,4 +1,4 @@
-@import '../../../pages/parameters.scss';
+@import "../../../pages/parameters.scss";
 
 .Button {
   padding: 11px 40px;
@@ -8,17 +8,18 @@
   outline: none;
   height: max-content;
   width: 100%;
+  cursor: pointer;
+  transition: all .5s;
 
   p {
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 16px;
     font-weight: 500;
   }
 }
 
 .Button:hover {
-
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 
   p {
     color: $baseColor;
