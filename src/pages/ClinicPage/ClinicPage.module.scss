@@ -1,8 +1,7 @@
 @import '../parameters';
 
 .ClinicPage {
-  width: stretch;
-  height: stretch;
+  width: 100%;
   border-radius: 24px;
   padding: 24px;
   background-color: #FFFFFF;
@@ -30,7 +29,7 @@
 }
 
 .Table {
-  width: stretch;
+  width: 100%;
 
   thead {
     background-color: $bgColor;

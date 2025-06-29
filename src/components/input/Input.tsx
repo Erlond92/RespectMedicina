@@ -1,71 +1,51 @@
-import styles from './Input.module.scss';
-import EyeOn from '../../img/Eye-on.svg?react';
-import EyeOff from '../../img/Eye-off.svg?react';
-import React, {useState} from "react";
-import {useSelector} from "react-redux";
-import type {RootState} from "../../App.tsx";
+import styles from "./Input.module.scss";
+import EyeOn from "../../img/Eye-on.svg?react";
+import EyeOff from "../../img/Eye-off.svg?react";
+import React, { useState } from "react";
 
-export interface inputProps {
-    type: 'login' | 'password';
-}
+export interface InputProps {
+  type: "login" | "password";
+  value: string;
+  placeholder?: string;
+  error?: boolean;
+  onInput?: (name: string, value: string) => void;
+ }
 
-export const Input: React.FC<inputProps> = props =>  {
-    const isErrorAuthorization = useSelector((state: RootState) => state.errorAuthorization.isError);
-    const [isEmpty, setIsEmpty] = useState(true);
-    const [showPassword, setShowPassword] = useState(false);
-    let defaultValue = '';
-    switch (props.type) {
-        case 'login':
-            defaultValue = 'Введите логин';
-            break;
-        case "password":
-            defaultValue = 'Введите пароль';
-            break;
-    }
+export const Input: React.FC<InputProps> = ({value, type, placeholder, error,onInput, ...props}) => {
+  const [showPassword, setShowPassword] = useState(false);
 
-    // @ts-expect-error
-    const onClick = (e) => {
-        if (e.target.value == defaultValue) {
-            e.target.value = '';
-        }
-    };
+  const handleInput = (e: React.FormEvent<HTMLInputElement>) => {
+    const target = e.target as HTMLInputElement;
+    
+    onInput?.(type, target.value);
+  };
+  return (
+    <div
+      className={styles.Input}
+      style={{
+        border: error ? "1px #E30206 solid" : "none",
+      }}
+    >
+      <input
+        id={type}
+        type={type === "password" && !showPassword ? "password" : "text"}
+        name={type}
+        value={value}
+        placeholder={placeholder}
+        onChange={handleInput}
+        {...props}
+      />
 
-    // @ts-expect-error
-    const onBlur = (e) => {
-        if (e.target.value == '') {
-            e.target.value = defaultValue;
-        }
-    };
-
-    // @ts-expect-error
-    const onInputCapture = (e) => {
-        if (e.target.value == '') {
-            setIsEmpty(true);
-        } else {
-            setIsEmpty(false);
-        }
-    }
-    return (
-        <div className={styles.Input}
-             style={{
-                 border: (isErrorAuthorization) ? '1px #E30206 solid' : 'none'
-             }}
+      {type == "password" ? (
+        <button
+          onClick={() => {
+            setShowPassword(!showPassword);
+          }}
+          type="button"
         >
-            <input
-                id = { props.type }
-                type = { (props.type=='password' && !showPassword && !isEmpty ) ? 'password' :'text' }
-                name={props.type}
-                defaultValue={defaultValue}
-                onClick={onClick}
-                onBlur={onBlur}
-                onInputCapture={onInputCapture}
-            />
-            { (props.type == 'password') ?
-                <button onClick={() => { setShowPassword(!showPassword) }}  >
-                    { (!showPassword) ? <EyeOn/> : <EyeOff/> }
-                </button>
-                : <></>
-            }
-        </div>
-    );
+          {!showPassword ? <EyeOn /> : <EyeOff />}
+        </button>
+      ) : null}
+    </div>
+  );
 };

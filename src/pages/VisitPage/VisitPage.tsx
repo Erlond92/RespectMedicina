@@ -2,14 +2,15 @@ import defaultStyle from '../defaultStyles.module.scss';
 import style from './VisitPage.module.scss';
 import {SideMenu} from "../../components/sideMenu/sideMenu";
 import {Search} from "../../components/input/search/Search";
-import {useParams} from "react-router-dom";
 import {AddPacient} from "./addPacient/addPacient";
 import {useSelector} from "react-redux";
 import type {RootState} from "../../App";
 import {Pacient} from "./Pacient/Pacient";
 
 export const VisitPage = () => {
+
     const pacientList = useSelector((state: RootState) => state.pacientList);
+
     return (
         <div className={defaultStyle.Page}>
             <SideMenu/>

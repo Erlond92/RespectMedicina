@@ -1,11 +1,12 @@
 @import '../../parameters';
 
 .Clinic {
-  width: stretch;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 
   &__name {
     display: flex;
