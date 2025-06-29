@@ -9,7 +9,6 @@ import type {RootState} from "../../App";
 import {Pacient} from "./Pacient/Pacient";
 
 export const VisitPage = () => {
-    const { id } = useParams();
     const pacientList = useSelector((state: RootState) => state.pacientList);
     return (
         <div className={defaultStyle.Page}>

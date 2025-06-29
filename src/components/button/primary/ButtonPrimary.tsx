@@ -8,7 +8,7 @@ export const ButtonPrimary = () => {
     const checkData = (e: React.FormEvent) => {
         e.preventDefault();
         const form = document.getElementById('formAuthorization');
-        // @ts-ignore
+        // @ts-expect-error
         const formData = Object.fromEntries(new FormData(form));
         if (formData.login == 'admin' && formData.password == 'admin') {
             navigate('/clinic');

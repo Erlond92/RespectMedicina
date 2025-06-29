@@ -23,21 +23,21 @@ export const Input: React.FC<inputProps> = props =>  {
             break;
     }
 
-    // @ts-ignore
+    // @ts-expect-error
     const onClick = (e) => {
         if (e.target.value == defaultValue) {
             e.target.value = '';
         }
     };
 
-    // @ts-ignore
+    // @ts-expect-error
     const onBlur = (e) => {
         if (e.target.value == '') {
             e.target.value = defaultValue;
         }
     };
 
-    // @ts-ignore
+    // @ts-expect-error
     const onInputCapture = (e) => {
         if (e.target.value == '') {
             setIsEmpty(true);

@@ -7,14 +7,14 @@ import {clinicList} from "../../redux";
 export const AddClinic = () => {
     const [AddMenu, setAddMenu] = useState(false);
     const distpach = useDispatch();
-    // @ts-ignore
+    // @ts-expect-error
     const onClick = (e) => {
         if (e.target.value == e.target.defaultValue) {
             e.target.value = '';
         }
     };
 
-    // @ts-ignore
+    // @ts-expect-error
     const onBlur = (e) => {
         if (e.target.value == '') {
             e.target.value = e.target.defaultValue;
