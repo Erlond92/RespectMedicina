@@ -1,33 +1,26 @@
-import {JSX} from "react";
+import { JSX } from "react";
 import Plus from "../../../img/Plus.svg?react";
-import style from './addButton.module.scss';
-import {useDispatch} from "react-redux";
-import {isClinic, isPacient} from "../../../redux/toggle";
+import style from "./addButton.module.scss";
+import { useDispatch } from "react-redux";
+import { isClinic } from "../../../redux/toggle";
 
 type Props = {
-  title: 'addClinic' | 'addPacient' | string;
-  children? : JSX.Element;
-}
+  title: string;
+  children?: JSX.Element;
+};
 
-export const AddButton: React.FC<Props> = (props) => {
+export const AddButton: React.FC<Props> = ({title}) => {
   const distpatch = useDispatch();
-  switch (props.title) {
-    case 'addClinic':
-      return (<>
-        <button className={style.AddClinic} onClick={() => { distpatch(isClinic()) }}>
-          <Plus />
-          Добавить клинику
-        </button>
-      </>);
-      break;
-    case 'addPacient':
-      return (<>
-        <button className={style.AddClinic} onClick={() => { distpatch(isPacient()) }}>
-          <Plus />
-          Добавить пациента
-        </button>
-      </>);
-      break;
-    default: return props.children;
-  }
+
+  return (
+    <button
+      className={style.AddClinic}
+      onClick={() => {
+        distpatch(isClinic());
+      }}
+    >
+      <Plus />
+     {title}
+    </button>
+  );
 };

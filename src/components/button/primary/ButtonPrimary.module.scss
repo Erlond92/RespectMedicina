@@ -10,18 +10,17 @@
   width: 100%;
   cursor: pointer;
   transition: all .5s;
+  font-size: 16px;
+  font-weight: 500;
 
-  p {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 500;
+  &.gray {
+   background-color: $bgColor;
+   color: $txtColor;
+   border: none;
   }
 }
 
 .Button:hover {
   background-color: #ffffff;
-
-  p {
-    color: $baseColor;
-  }
+  color: $baseColor;
 }

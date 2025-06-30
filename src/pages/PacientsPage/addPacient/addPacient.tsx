@@ -4,7 +4,7 @@ import {Form} from "../../../components/form/Form";
 
 export const AddPacient = () => {
 	return <>
-		<AddButton title={'addPacient'} />
+		<AddButton title={'Добавить пациента'} />
 		<Form title={'addPacient'} />
 	</>;
 }

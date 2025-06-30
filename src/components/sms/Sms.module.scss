@@ -1,10 +1,11 @@
+@import '../../pages/parameters.scss';
+
 .Footer {
-  position: fixed;
-  bottom: 128px;
   display: flex;
+  align-items: center;
   gap: 24px;
-  flex-direction: row;
-  justify-items: start;
+  padding: 4px;
+  background-color: $bgColor;
 
   &__button_error, &__button_good {
     opacity: 0.3;

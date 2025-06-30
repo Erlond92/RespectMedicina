@@ -10,7 +10,7 @@ type Props = {
 	id: string,
 }
 
-export const FormPacient: React.FC<Props> = (props) => {
+export const FormPacient: React.FC<Props> = () => {
 	const distpach = useDispatch();
 	const menuCancel = () => {
 		distpach(isPacient());

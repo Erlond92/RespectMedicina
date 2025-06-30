@@ -1,5 +1,5 @@
 import {isClinic} from "../../../redux/toggle";
-import React, {useCallback, useEffect, useState} from "react";
+import React, {useState} from "react";
 import {addClinic} from "../../../redux/clinicList";
 import {useDispatch, useSelector} from "react-redux";
 import type {RootState} from "../../../redux/store";

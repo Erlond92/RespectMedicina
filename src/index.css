@@ -63,3 +63,9 @@ a {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+body {
+  --accent-color: #00c878;
+  --black-color:#1E1E1E;
+  --gray-color:#F9F9FB;
+}

@@ -1,0 +1,12 @@
+@import '../../../../../pages/parameters.scss';
+
+.box {
+  color: $txtColor;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.1;
+
+  @media(max-width:1279px) {
+    display: none;
+  }
+}

@@ -1,0 +1,54 @@
+@import "../../../../../pages/parameters.scss";
+
+.Box {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.1;
+
+  @media (max-width: 1279px) {
+    display: none;
+  }
+}
+
+.Action {
+  background-color: var(--gray-color);
+  padding: 5px 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--black-color);
+  border-radius: 8px;
+  min-height: 28px;
+}
+
+.Button {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 10px;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: $baseColor;
+
+    path {
+      stroke: #fff;
+    }
+  }
+}
+
+.Button svg {
+  width: 10px;
+  height: 10px;
+
+  path {
+    transition: all 0.5s;
+  }
+}

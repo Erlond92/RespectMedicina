@@ -1,7 +1,14 @@
 @import "../../parameters";
 
+.Table-box {
+  height: calc(100vh - calc(24px * 2) - 200px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 .Table {
-  width: stretch;
+  width: 100%;
+
 
   tr {
     min-width: 100%;
