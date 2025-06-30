@@ -1,0 +1,72 @@
+@import "../../parameters";
+
+.Table {
+  width: stretch;
+
+  tr {
+    min-width: 100%;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    justify-items: start;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    padding-left: 12px;
+
+    th:first-child {
+      height: 16px;
+    }
+  }
+
+  &__title {
+    margin-left: 24px;
+  }
+
+  thead {
+    tr {
+      opacity: 0.6;
+      padding: 12px;
+      background-color: #F9F9F9;
+      border-radius: 12px;
+    }
+  }
+
+  tbody {
+    tr {
+      display: flex;
+      flex-direction: row;
+      min-height: 50px;
+    }
+  }
+
+  &__pacient {
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+
+    h2 {
+      font-weight: 600;
+      font-size: 13px;
+      color: $txtColor;
+    }
+
+    h5 {
+      font-weight: 400;
+      font-size: 12px;
+      color: $txtColor;
+    }
+  }
+
+  &__delete {
+    background: transparent;
+
+  }
+
+  &__delete:hover > path {
+    fill: red;
+  }
+}

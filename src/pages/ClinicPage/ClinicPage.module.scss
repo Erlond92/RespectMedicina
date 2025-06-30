@@ -1,4 +1,4 @@
-@import '../parameters';
+@import '../parameters.scss';
 
 .ClinicPage {
   width: 100%;
@@ -33,6 +33,7 @@
 
   thead {
     background-color: $bgColor;
+    border-radius: 0 12px 12px 0;
     h2 {
       padding: 12px 14px;
       color: $txtColor;

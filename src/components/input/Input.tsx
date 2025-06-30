@@ -4,7 +4,7 @@ import EyeOff from "../../img/Eye-off.svg?react";
 import React, { useState } from "react";
 
 export interface InputProps {
-  type: "login" | "password";
+  type: "login" | "password" | string;
   value: string;
   placeholder?: string;
   error?: boolean;

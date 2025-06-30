@@ -4,7 +4,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 interface ClinicProps {
-  id: string;
+  id: number;
   name: string;
   address: string;
 }
@@ -20,7 +20,7 @@ export const Clinic: React.FC<ClinicProps> = (props) => {
     <div
       className={style.Clinic}
       onClick={() => {
-        toClinic(props.id);
+        toClinic(props.id.toString());
       }}
     >
       <div className={style.Clinic__name}>

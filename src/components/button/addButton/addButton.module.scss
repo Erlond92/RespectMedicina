@@ -1,0 +1,17 @@
+@import '../../../pages/parameters';
+
+.AddClinic {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-items: center;
+  background-color: #FFFFFF;
+  border: 1px $baseColor solid;
+  border-radius: 8px;
+  padding: 8px 33px;
+
+  color: $baseColor;
+  font-weight: 500;
+  font-size: 16px;
+}

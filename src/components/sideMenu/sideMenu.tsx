@@ -5,50 +5,42 @@ import Chart from "../../img/Chart.svg?react";
 import MEDODS from "../../img/MEDODS.svg?react";
 import style from "./sideMenu.module.scss";
 import { UserAvatar } from "./userAvatar/userAvatar";
-
 import { Link } from "react-router-dom";
 
-export const SideMenu = () => {
+type Props = {
+  action: 'Clinic' | 'Reviews' | 'Visits';
+}
+
+export const SideMenu: React.FC<Props> = (props) => {
   return (
     <div className={style.sideMenu}>
       <Link to="/clinic" className={style.Logo}>
         <img src="/img/Logo.png" alt="logo"  />
       </Link>
-
       <ul className={style.List}>
-        <Link to="/clinic" className={style.List__line}>
+        <Link to="/clinic" className={( props.action == 'Clinic' ) ? style.List__line_action :style.List__line }>
           <Clinic />
-
           <p>Клиники</p>
         </Link>
-
-        <Link to="/reviews" className={style.List__line}>
+        <Link to="/reviews" className={( props.action == 'Reviews' ) ? style.List__line_action :style.List__line}>
           <Star />
-
           <p>Отзывы</p>
         </Link>
-
-        <Link to="/visits" className={style.List__line}>
+        <Link to="/visits" className={( props.action == 'Visits' ) ? style.List__line_action :style.List__line}>
           <Visit />
-
           <p>Визиты</p>
         </Link>
       </ul>
-
       <ul className={style.List}>
         <Link to="/analitic" className={style.List__line}>
           <Chart />
-
           <p>Аналитика</p>
         </Link>
-
         <Link to="/medods" className={style.List__line}>
           <MEDODS />
-
           <p>MEDODS</p>
         </Link>
       </ul>
-      
       <div className={style.Users}>
         <UserAvatar symbol={"B"} />
         <p>Морару Валентин</p>

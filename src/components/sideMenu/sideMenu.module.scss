@@ -7,7 +7,7 @@
   max-width: 305px;
   width: 100%;
   flex-shrink: 0;
-  height: calc(100vh - 96px);
+  height: -webkit-fill-available;
   padding: 24px;
   border-radius: 24px;
   background-color: #FFFFFF;
@@ -38,9 +38,33 @@
     border: none;
     transition: all .5s;
     border-radius: 360px;
+    opacity: 0.6;
     
-    &:hover {
+    &_action {
+      width: 100%;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      justify-content: start;
+      align-items: center;
+      border: none;
+      transition: all .5s;
+      border-radius: 360px;
       background-color: #F9F9F9;
+
+      * {
+        background: transparent;
+      }
+    }
+
+    &:hover {
+      opacity: 1;
+      background-color: #F9F9F9;
+
+      * {
+        background: transparent;
+      }
     }
   
     p {
@@ -49,7 +73,6 @@
     }
   }
 }
-
 
 .Logo {
   padding-bottom: 24px;

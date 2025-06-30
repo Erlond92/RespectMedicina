@@ -1,0 +1,26 @@
+import {createSlice} from "@reduxjs/toolkit";
+
+type Doctor = {
+  name: string,
+  pro: string[],
+}
+
+const initialState: Doctor[] = [
+  {
+    name: 'Романова Надежда Александровна',
+    pro: ['Травматолог', 'врач ЛФК', 'ортопед']
+  }
+];
+
+export const doctorListSlice = createSlice({
+  name: 'doctorList',
+  initialState,
+  reducers: {
+    addDoctor: (state, action: { payload: Doctor }) => {
+      return [...state, action.payload];
+    },
+  }
+});
+
+export const { addDoctor } = doctorListSlice.actions;
+export default doctorListSlice;
