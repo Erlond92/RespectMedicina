@@ -1,11 +1,8 @@
-import Clinic from "../../img/Clinic.svg?react";
-import Star from "../../img/Star.svg?react";
-import Visit from "../../img/Visit.svg?react";
-import Chart from "../../img/Chart.svg?react";
-import MEDODS from "../../img/MEDODS.svg?react";
+import { Icons } from "@/img/icons";
 import style from "./sideMenu.module.scss";
 import { UserAvatar } from "./userAvatar/userAvatar";
 import { Link } from "react-router-dom";
+import { Images } from "@/img/images";
 
 type Props = {
   action: 'Clinic' | 'Reviews' | 'Visits';
@@ -19,25 +16,25 @@ export const SideMenu: React.FC<Props> = (props) => {
       </Link>
       <ul className={style.List}>
         <Link to="/clinic" className={( props.action == 'Clinic' ) ? style.List__line_action :style.List__line }>
-          <Clinic />
+          <Icons.Clinic />
           <p>Клиники</p>
         </Link>
         <Link to="/reviews" className={( props.action == 'Reviews' ) ? style.List__line_action :style.List__line}>
-          <Star />
+          <Icons.StarIcon />
           <p>Отзывы</p>
         </Link>
         <Link to="/visits" className={( props.action == 'Visits' ) ? style.List__line_action :style.List__line}>
-          <Visit />
+          <Icons.VisitIcon />
           <p>Визиты</p>
         </Link>
       </ul>
       <ul className={style.List}>
         <Link to="/analitic" className={style.List__line}>
-          <Chart />
+          <Icons.ChartIcon />
           <p>Аналитика</p>
         </Link>
         <Link to="/medods" className={style.List__line}>
-          <MEDODS />
+          <img src={Images.MeddosImage} alt="иконка" />
           <p>MEDODS</p>
         </Link>
       </ul>

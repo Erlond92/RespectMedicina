@@ -1,8 +1,8 @@
 import React, {useEffect, useRef, useState} from "react";
 import {useDispatch} from "react-redux";
 import style from "../Form.module.scss";
-import {Input} from "../../input/Input";
-import {addPacient} from "../../../redux/pacientList";
+import { Input } from "@/components/input/Input";
+import { addPacient } from "@/redux/pacientList";
 
 type Props = {
     id: string,

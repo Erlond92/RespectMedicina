@@ -1,14 +1,20 @@
-import Trash from '../../../img/Delete.svg?react';
-import style from './remove.module.scss';
-import {useState} from "react";
+import style from "./remove.module.scss";
+
+import { Icons } from "@/img/icons";
 
 type Props = {
-	onClick: () => void;
-}
+  onClick: () => void;
+};
 
 export const Remove: React.FC<Props> = (props) => {
-	const [color, setColor] = useState('#1E1E1E');
-	return <button className={style.Trash} onClick={() => {props.onClick()}}>
-		<Trash stroke={color} onClick={() => {setColor('#E30206')}}/>
-	</button>
-}
+  return (
+    <button
+      className={style.Trash}
+      onClick={() => {
+        props.onClick();
+      }}
+    >
+      <Icons.RemoveIcon className={style.Icon}/>
+    </button>
+  );
+};

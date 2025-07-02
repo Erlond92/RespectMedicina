@@ -6,11 +6,11 @@
 }
 
 html  {
-  height: stretch;
+  height: 100%;
 }
 
 body {
-  height: stretch;
+  height: 100%;
   padding: 24px;
   background-color: #F9F9FB;
   font-family: 'Inter', sans-serif;

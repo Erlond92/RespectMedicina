@@ -1,13 +1,22 @@
-import Star from '../../../img/starRate.svg?react';
-import style from './rate.module.scss'
+import { Icons } from "@/img/icons";
+import style from "./rate.module.scss";
 
 type Props = {
-	rate: number,
-}
+  rate: number;
+};
 
 export const Rate: React.FC<Props> = (props) => {
-	const rate = [<></>, <></>, <></>, <></>, <></>]
-	return <div className={style.Rate}>
-		{ rate.fill(<Star/>, 0, props.rate ).map((element) => { return element })}
-	</div>
+  return (
+    <div className={style.Rate}>
+      {Array(5)
+        .fill(null)
+        .map((_, index) => (
+          <Icons.StarIcon
+            key={index}
+            fill={index < props.rate ? "#F59700" : "none"}
+            stroke={index < props.rate ? "#F59700" : "#D1D1D1"}
+          />
+        ))}
+    </div>
+  );
 };

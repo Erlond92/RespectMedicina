@@ -1,6 +1,5 @@
 import styles from "./Input.module.scss";
-import EyeOn from "../../img/Eye-on.svg?react";
-import EyeOff from "../../img/Eye-off.svg?react";
+import { Icons } from "@/img/icons";
 import React, { useState } from "react";
 
 export interface InputProps {
@@ -43,7 +42,7 @@ export const Input: React.FC<InputProps> = ({value, type, placeholder, error,onI
           }}
           type="button"
         >
-          {!showPassword ? <EyeOn /> : <EyeOff />}
+          {!showPassword ? <Icons.EyeOnIcon /> : <Icons.EyeOffIcon />}
         </button>
       ) : null}
     </div>

@@ -1,3 +1,11 @@
 .Trash {
   background: transparent;
 }
+
+.Icon path{
+  transition: all .5s;
+}
+
+.Icon:hover path{
+  stroke:#E30206;
+}

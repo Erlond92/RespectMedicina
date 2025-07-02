@@ -1,4 +1,4 @@
-import ClinicIcon from "../../../img/ClinicIcon.svg?react";
+import { Icons } from "@/img/icons";
 import style from "./Clinic.module.scss";
 import React from "react";
 import { useNavigate } from "react-router-dom";
@@ -28,7 +28,7 @@ export const Clinic: React.FC<ClinicProps> = (props) => {
         <p>{props.address}</p>
       </th>
       <td>
-        <ClinicIcon />
+        <Icons.ClinicIcon />
       </td>
     </tr>
   );

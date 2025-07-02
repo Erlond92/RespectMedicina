@@ -1,6 +1,6 @@
 import style from "./PaginationAction.module.scss";
 
-import { Icons } from "../../../../../img/icons";
+import { Icons } from "@/img/icons";
 
 export const PaginationAction = () => {
   return (

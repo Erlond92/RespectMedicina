@@ -1,5 +1,5 @@
 import style from "./Search.module.scss";
-import SearchIcon from "../../../img/search.svg?react";
+import { Icons } from "@/img/icons";
 
 export const Search = () => {
 
@@ -27,7 +27,7 @@ export const Search = () => {
         onBlur={onBlur}
       />
       <button>
-        <SearchIcon />
+        <Icons.SeacrhIcon />
       </button>
     </div>
   );

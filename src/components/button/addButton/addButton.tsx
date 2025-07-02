@@ -1,24 +1,22 @@
-import {JSX} from "react";
-import Plus from "../../../img/Plus.svg?react";
+import { Icons } from "@/img/icons";
 import style from "./addButton.module.scss";
-import {useDispatch} from "react-redux";
 
 type Props = {
-    title: string,
-    children?: JSX.Element,
-    onClose: () => void
+  title: string;
+  children?: React.ReactNode;
+  onClose: () => void;
 };
 
-export const AddButton: React.FC<Props> = ({title, onClose}) => {
-    const distpatch = useDispatch();
-
-    return (
-        <button
-            className={style.AddClinic}
-            onClick={() => { onClose() }}
-        >
-            <Plus/>
-            {title}
-        </button>
-    );
+export const AddButton: React.FC<Props> = ({ title, onClose }) => {
+  return (
+    <button
+      className={style.AddClinic}
+      onClick={() => {
+        onClose();
+      }}
+    >
+      <Icons.PlusIcon />
+      {title}
+    </button>
+  );
 };

@@ -1,4 +1,4 @@
-import { Icons } from "../../../img/icons";
+import { Icons } from "@/img/icons";
 
 import classNames from "classnames";
 

@@ -1,5 +1,5 @@
-import { Input } from "../../components/input/Input";
-import { ButtonPrimary } from "../../components/button/primary/ButtonPrimary";
+import { Input } from "@/components/input/Input";
+import { ButtonPrimary } from "@/components/button/primary/ButtonPrimary";
 import styles from "./Authorization.module.scss";
 import { useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";

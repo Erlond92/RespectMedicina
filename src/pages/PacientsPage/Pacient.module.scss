@@ -3,7 +3,7 @@
   min-height: 100%;
   border-radius: 24px;
   padding: 24px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
 
@@ -13,7 +13,11 @@
     gap: 16px;
 
     button:first-child {
-      all: unset;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+
       * {
         align-self: anchor-center;
       }
@@ -53,4 +57,8 @@
       gap: 16px;
     }
   }
+}
+
+.Footer {
+  margin-top: auto;
 }

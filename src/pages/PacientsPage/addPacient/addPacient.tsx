@@ -1,6 +1,6 @@
-import React, {useState} from "react";
-import {AddButton} from "../../../components/button/addButton/addButton";
-import {FormPacient} from "../../../components/form/FormPacient/FormPacient";
+import {useState} from "react";
+import { AddButton } from "@/components/button/addButton/addButton";
+import { FormPacient } from "@/components/form/FormPacient/FormPacient";
 
 export const AddPacient = () => {
 	const [ isClose, setIsClose ] = useState(false);

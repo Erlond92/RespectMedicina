@@ -1,8 +1,8 @@
 import React, {useEffect, useRef, useState} from "react";
-import {addClinic} from "../../../redux/clinicList";
+import { addClinic } from "@/redux/clinicList";
 import {useDispatch} from "react-redux";
 import style from "../Form.module.scss";
-import {Input} from "../../input/Input";
+import { Input } from "@/components/input/Input";
 
 type Props = {
     isClose: boolean,
@@ -26,6 +26,7 @@ export const FormClinic: React.FC<Props> = (props) => {
             });
         if (formData.get('name') == '' && formData.get('city') == '' && formData.get('address') == '') return;
         distpach(addClinic({
+            id: Number(new Date().toLocaleDateString()),
             name: formData.get('name'),
             address: `г. ${formData.get('city')}, ${formData.get('address')}`,
         }));
