@@ -6,9 +6,9 @@ import {useSelector} from "react-redux";
 import type {RootState} from "../../redux/store";
 import Back from '../../img/Back.svg?react';
 import {useNavigate} from "react-router-dom";
-import {AddPacient} from "./addPacient/addPacient";
 import {PacientTable} from "../VisitPage/PacientTable/PacientTable";
 import {Sms} from "../../components/sms/Sms";
+import {AddPacient} from "./addPacient/addPacient";
 
 type Props = {
 	id: number;
@@ -40,7 +40,7 @@ export const PacientPage: React.FC<Props> = (props) => {
 						</div>
 					</header>
 					<PacientTable type={'Clinic'} pacientList={pacientList}/>
-					<Sms currentSms={99}/>
+					<Sms currentSms={101}/>
 				</div>
 		</div>
 	);

@@ -1,0 +1,9 @@
+@use '../../../pages/parameters.scss' as *;
+
+.Rate {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2px;
+}

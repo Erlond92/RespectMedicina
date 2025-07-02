@@ -3,9 +3,9 @@ import { createSlice } from "@reduxjs/toolkit";
 type Pacient = {
   name: string;
   phone: string;
-  doctor?: string;
+  doctor: string;
   doctor_pro?: string;
-  info?: string;
+  info: string;
 };
 
 const initialPacient: Pacient[] = [

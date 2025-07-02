@@ -1,4 +1,4 @@
-@import '../../../pages/parameters';
+@use '../../../pages/parameters' as *;
 
 .Search {
   display: flex;

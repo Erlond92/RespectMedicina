@@ -1,10 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import {AddButton} from "../../../components/button/addButton/addButton";
-import {Form} from "../../../components/form/Form";
+import {FormPacient} from "../../../components/form/FormPacient/FormPacient";
 
 export const AddPacient = () => {
+	const [ isClose, setIsClose ] = useState(false);
+	const onClose = () => setIsClose(!isClose);
+
 	return <>
-		<AddButton title={'Добавить пациента'} />
-		<Form title={'addPacient'} />
+		<AddButton title={'Добавить пациента'} onClose={onClose} />
+		<FormPacient id={'1'} onClose={onClose} isClose={isClose}/>
 	</>;
 }

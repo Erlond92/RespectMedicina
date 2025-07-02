@@ -1,0 +1,107 @@
+@use "../../parameters" as *;
+
+.Table {
+  height: calc(100% - 48px);
+  overflow-y: auto;
+
+  table {
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    tr {
+      width: 100%;
+      height: 40px;
+    }
+
+    thead {
+      position: sticky;
+      z-index: 2;
+      top: 0;
+      background-color: $bgColor;
+      opacity: .6;
+
+      tr {
+        opacity: .6;
+        max-width: fit-content;
+      }
+
+      tr > th {
+        text-align: start;
+        align-content: center;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 12px;
+        text-transform: uppercase;
+        color: $txtColor;
+        padding: 0 12px;
+      }
+
+      .Table__date, .Table__rate {
+        align-content: center;
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 12px;
+        color: $txtColor;
+        p {
+          align-content: center;
+        }
+      }
+    }
+
+    tbody {
+      position: sticky;
+      overflow-x: auto;
+
+      tr {
+        height: 50px;
+        border-bottom: 2px solid $bgColor;
+
+        td{
+          padding: 0 12px;
+        }
+
+        td:not(:first-child) {
+          text-align: start;
+        }
+      }
+    }
+  }
+
+  &__pacient {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    color: $txtColor;
+
+    h2 {
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    h5 {
+      font-weight: 400;
+      font-size: 12px;
+    }
+  }
+
+  &__icon {
+    width: 48px;
+  }
+
+  &__rate {
+    width: 100px;
+  }
+
+  &__date:not(:first-child), &__rate:not(:first-child) {
+    opacity: .7;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.4;
+    color: $txtColor;
+  }
+}

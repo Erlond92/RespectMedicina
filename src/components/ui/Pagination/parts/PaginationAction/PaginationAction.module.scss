@@ -1,4 +1,4 @@
-@import "../../../../../pages/parameters.scss";
+@use "../../../../../pages/parameters.scss" as *;
 
 .Box {
   display: flex;

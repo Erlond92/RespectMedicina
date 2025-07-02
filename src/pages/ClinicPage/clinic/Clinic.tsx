@@ -17,20 +17,19 @@ export const Clinic: React.FC<ClinicProps> = (props) => {
   };
 
   return (
-    <div
+    <tr
       className={style.Clinic}
       onClick={() => {
         toClinic(props.id.toString());
       }}
     >
-      <div className={style.Clinic__name}>
+      <th scope="row" className={style.Clinic__name}>
         <h2>{props.name}</h2>
         <p>{props.address}</p>
-      </div>
-
-      <span>
+      </th>
+      <td>
         <ClinicIcon />
-      </span>
-    </div>
+      </td>
+    </tr>
   );
 };

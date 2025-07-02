@@ -1,8 +1,17 @@
 import style from './checkbox.module.scss';
+import React from "react";
 
-export const Checkbox = () => {
-	return <label className={style.customCheckbox}>
-		<input type={"checkbox"}/>
-		<span className={style.checkmark}></span>
-	</label>;
+type Props = {
+	onClick: (e: React.MouseEvent<HTMLInputElement, MouseEvent>) => void,
+}
+
+interface CheckboxProps {
+	onClick?: () => void
+}
+
+export const Checkbox: React.FC<Props> = (props) => {
+	return <>
+		<input className={style.customCheckbox} type={"checkbox"} onClick={(e) => props.onClick(e)}/>
+	</>
+
 }

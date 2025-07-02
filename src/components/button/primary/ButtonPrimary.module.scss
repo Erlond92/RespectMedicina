@@ -1,4 +1,4 @@
-@import "../../../pages/parameters.scss";
+@use "../../../pages/parameters.scss" as *;
 
 .Button {
   padding: 11px 40px;
@@ -12,12 +12,7 @@
   transition: all .5s;
   font-size: 16px;
   font-weight: 500;
-
-  &.gray {
-   background-color: $bgColor;
-   color: $txtColor;
-   border: none;
-  }
+  color: #FFFFFF;
 }
 
 .Button:hover {

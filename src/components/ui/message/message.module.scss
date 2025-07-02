@@ -1,0 +1,20 @@
+@use '../../../pages/parameters' as *;
+
+
+.Message {
+  position: relative;
+  top: 10px;
+  right: -15px;
+  width: 20px;
+  height: 20px;
+  background-color: $baseColor;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 120%;
+  border: 1px #FFFFFF solid;
+  color: #FFFFFF;
+}

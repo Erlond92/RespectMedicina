@@ -1,5 +1,7 @@
 .Page {
+  width: 100%;
   display: flex;
   flex-direction: row;
   gap: 24px;
+  height: calc(100vh - 48px);
 }

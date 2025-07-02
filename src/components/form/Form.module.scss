@@ -1,4 +1,4 @@
-@import '../../pages/parameters';
+@use '../../pages/parameters.scss' as *;
 
 .Overlay {
   cursor: unset;
@@ -7,6 +7,7 @@
   background: rgba(0, 0, 0, 0.5);
   width: 100vw;
   height: 100vh;
+  z-index: 999;
 }
 
 .Form {
@@ -22,10 +23,13 @@
   flex-direction: column;
   gap: 32px;
   padding: 40px;
-  border-radius: 40px;
+  border-radius: 12px;
 
   h1 {
     text-align: center;
+    font-weight: 600;
+    color: $txtColor;
+    font-size: 32px;
   }
 
   &__input {

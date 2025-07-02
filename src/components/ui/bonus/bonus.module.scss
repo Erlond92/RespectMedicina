@@ -1,0 +1,26 @@
+@use '../../../pages/parameters' as *;
+
+.Bonus {
+  width: 95px;
+  height: 30px;
+  text-align: center;
+  align-content: center;
+  color: #FFFFFF;
+  background-color: $baseColor;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.Disable {
+  width: 95px;
+  height: 30px;
+  text-align: center;
+  align-content: center;
+  color: $txtColor;
+  opacity: .3;
+  background-color: $bgColor;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+}

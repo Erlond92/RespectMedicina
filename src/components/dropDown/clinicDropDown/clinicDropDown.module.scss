@@ -1,0 +1,42 @@
+@use '../../../pages/parameters.scss' as *;
+
+.DropDown {
+  &__menu {
+    padding: 4px;
+
+    &__header {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 6px;
+      background-color: #FFFFFF;
+      margin: 0;
+
+      padding: 6px 16px;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+      max-height: 400px;
+      height: auto;
+    }
+
+    &__item {
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+
+      &__text {
+        color: $txtColor;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+}

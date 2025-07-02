@@ -1,47 +1,18 @@
-.customCheckbox {
-  position: relative;
-  cursor: pointer;
-  font-size: 16px;
-  -webkit-tap-highlight-color: transparent;
-}
-.customCheckbox input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
+@use '../../../pages/parameters.scss' as *;
 
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 16px;
+.customCheckbox{
+  appearance: none;
+  -webkit-appearance: none;
   width: 16px;
-  background-color: #e8e8e8;
+  height: 16px;
+  border: 2px solid #7E82994D;
   border-radius: 4px;
-  transition: all 0.3s ease;
 }
 
-.checkmark::after {
-  content: '';
-  position: absolute;
-  display: none;
-  left: 5px;
-  width: 6px;
-  height: 12px;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-  border-color: #fff;
-}
-
-.customCheckbox:hover .checkmark {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.customCheckbox input:checked + .checkmark {
-  opacity: 0.6;
-  background-color: #00C878;
-}
-.customCheckbox input:checked + .checkmark::after {
-  display: block;
+.customCheckbox:checked {
+  background-color: $baseColor;
+  border-color: $baseColor;
+  background-image: url("../../../../public/img/Checked.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }

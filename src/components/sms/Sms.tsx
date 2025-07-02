@@ -20,16 +20,16 @@ export const Sms: React.FC<Props> = (props) => {
 
       <p className={style.Footer__text}>
         Отправлено смс:{" "}
-        <p
+        <span
           className={
             props.currentSms > 100
-              ? style.Footer__text__error
+              ? style.Footer__text_error
               : style.Footer__text_good
           }
         >
           {props.currentSms.toString()}
-        </p>
-        <p className={style.Footer__text_last}>/100</p>
+        </span>
+        <span className={style.Footer__text_last}>/100</span>
       </p>
     </footer>
   );

@@ -1,79 +1,87 @@
-@import "../../parameters";
-
-.Table-box {
-  height: calc(100vh - calc(24px * 2) - 200px);
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
+@use "../../parameters" as *;
 
 .Table {
-  width: 100%;
+  overflow-y: auto;
 
+  table {
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
 
-  tr {
-    min-width: 100%;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    justify-items: start;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-    padding-left: 12px;
-
-    th:first-child {
-      height: 16px;
-    }
-  }
-
-  &__title {
-    margin-left: 24px;
-  }
-
-  thead {
     tr {
-      opacity: 0.6;
-      padding: 12px;
-      background-color: #F9F9F9;
-      border-radius: 12px;
+      width: 100%;
+      height: 40px;
+    }
+
+    thead {
+      position: sticky;
+      z-index: 2;
+      top: 0;
+      background-color: $bgColor;
+
+      tr > th {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 12px;
+        text-transform: uppercase;
+        color: $txtColor;
+        padding: 0 12px;
+      }
+
+      tr > th:first-child {
+        width: 30px;
+      }
+      tr > th:not(:first-child) {
+        opacity: 0.6;
+        text-align: start;
+      }
+    }
+
+    tbody {
+      position: sticky;
+      overflow-x: auto;
+
+      tr {
+        border-bottom: 2px solid $bgColor;
+
+        td{
+          padding: 0 12px;
+        }
+
+        td:not(:first-child) {
+          text-align: start;
+        }
+      }
     }
   }
 
-  tbody {
-    tr {
-      display: flex;
-      flex-direction: row;
-      min-height: 50px;
-    }
-  }
-
-  &__pacient {
-    margin-left: 24px;
+  &__pacient, &__doctor {
     display: flex;
     flex-direction: column;
-    justify-content: start;
     text-align: start;
+    color: $txtColor;
 
     h2 {
       font-weight: 600;
       font-size: 13px;
-      color: $txtColor;
     }
 
     h5 {
       font-weight: 400;
       font-size: 12px;
-      color: $txtColor;
     }
   }
 
-  &__delete {
-    background: transparent;
-
+  &__icon {
+    width: 48px;
   }
 
-  &__delete:hover > path {
-    fill: red;
+  &__info {
+    width: 800px  ;
+    text-wrap: wrap;
+    font-weight: 400;
+    font-size: 13px;
+    color: $txtColor;
   }
 }

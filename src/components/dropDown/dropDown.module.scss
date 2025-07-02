@@ -1,0 +1,45 @@
+@use '../../pages/parameters.scss' as *;
+
+.dropDown {
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+
+  &__title {
+    text-align: start;
+    color: $txtColor;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .DropDown {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    padding: 12px 16px;
+    background-color: $bgColor;
+    border-radius: 8px;
+
+    &__item {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      opacity: .6;
+      background: transparent;
+    }
+
+    &__content {
+      z-index: 3;
+      left: 0;
+      width: 100%;
+      height: fit-content;
+      border-radius: 12px;
+      background-color: $bgColor;
+      margin-top: 12px;
+      padding: 4px;
+      position: absolute;
+    }
+  }
+}

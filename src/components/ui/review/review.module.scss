@@ -1,0 +1,27 @@
+@use '../../../pages/parameters' as *;
+
+.Bonus {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+
+  &__Item {
+    padding: 8px;
+    border-radius: 8px;
+    background-color: $bgColor;
+    font-weight: 500;
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+
+    &_pro {
+      text-transform: uppercase;
+      color: #3981F1;
+    }
+
+    &_yandex {
+      color: #FC3F1D;
+    }
+  }
+}

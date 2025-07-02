@@ -25,11 +25,18 @@ export const ClinicPage = () => {
             <AddClinic />
           </div>
         </header>
-        <table className={style.Table}>
-          <thead>
-            <h2>Клиника</h2>
-          </thead>
-          <tbody>
+        <div className={style.Table}>
+          <table>
+            <thead>
+            <tr>
+              <th scope="col">
+                Клиника
+              </th>
+              <th scope="col" className={style.Table__arrow}>
+              </th>
+            </tr>
+            </thead>
+            <tbody>
             {clinicList.keys().map((clinic) => (
               <Clinic
                 id={clinic}
@@ -37,8 +44,9 @@ export const ClinicPage = () => {
                 address={clinicList[clinic].address}
               />
             ))}
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

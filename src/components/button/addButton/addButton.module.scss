@@ -1,4 +1,4 @@
-@import '../../../pages/parameters';
+@use '../../../pages/parameters.scss' as *;
 
 .AddClinic {
   display: flex;
