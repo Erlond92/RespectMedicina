@@ -1,0 +1,104 @@
+@use '../parameters.scss' as *;
+
+.AnaliticPage {
+  width: 100%;
+  border-radius: 24px;
+  padding: 24px;
+  background-color: #FFFFFF;
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    h1 {
+      align-content: center;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 100%;
+    }
+
+    .Search {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 16px;
+    }
+  }
+}
+
+.Table {
+  overflow-y: auto;
+  height: calc(100% - 48px);
+
+  table {
+    height: 100%;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+
+    thead {
+      position: sticky;
+      z-index: 2;
+      top: 0;
+      background-color: $bgColor;
+      border-radius: 0 12px 12px 0;
+
+      th {
+        text-align: justify;
+        padding: 12px 14px;
+        color: $txtColor;
+        font-weight: 600;
+        font-size: 12px;
+        opacity: 0.6;
+        text-transform: uppercase;
+        line-height: 12px;
+      }
+    }
+
+    tbody {
+      position: sticky;
+    }
+  }
+
+  &__arrow {
+    width: 48px;
+  }
+}
+
+.Analitic {
+  width: 100%;
+  cursor: pointer;
+
+  &__name {
+    justify-self: start;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    padding: 7.5px 12px;
+
+    h2 {
+      font-weight: 600;
+      font-size: 13px;
+      color: $txtColor;
+    }
+    p {
+      font-weight: 400;
+      font-size: 12px;
+      color: $txtColor;
+    }
+  }
+
+  tr:not(&__name) {
+    td {
+      text-align: center;
+    }
+  }
+
+  button {
+    border: none;
+    background: transparent;
+  }
+
+}

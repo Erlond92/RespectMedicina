@@ -21,9 +21,15 @@ import { StarIcon } from "./star";
 import { StarRateIcon } from "./starRate";
 import { YesMessageIcon } from "./yesMessage";
 import { VisitIcon } from "./visit";
+import { ArrowDrop } from "./arrowDrop";
+import { DoctorLike } from "./doctorLike";
+import { Doctor } from "./doctor";
+import { DoctorClaim } from "./doctorClaim";
+import { DoctorRespect } from "./doctorRespect";
 
 export const Icons = {
   Arrow,
+  ArrowDrop,
   RemoveIcon,
   PlusIcon,
   BackIcon,
@@ -46,4 +52,8 @@ export const Icons = {
   StarRateIcon,
   VisitIcon,
   YesMessageIcon,
+  DoctorLike,
+  Doctor,
+  DoctorClaim,
+  DoctorRespect,
 };

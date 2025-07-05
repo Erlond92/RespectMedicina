@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Images } from "@/img/images";
 
 type Props = {
-  action: 'Clinic' | 'Reviews' | 'Visits';
+  action: 'Clinic' | 'Reviews' | 'Visits' | 'Analitic';
 }
 
 export const SideMenu: React.FC<Props> = (props) => {
@@ -29,7 +29,7 @@ export const SideMenu: React.FC<Props> = (props) => {
         </Link>
       </ul>
       <ul className={style.List}>
-        <Link to="/analitic" className={style.List__line}>
+        <Link to="/analitic" className={( props.action == 'Analitic' ) ? style.List__line_action :style.List__line}>
           <Icons.ChartIcon />
           <p>Аналитика</p>
         </Link>

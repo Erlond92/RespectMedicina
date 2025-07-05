@@ -74,3 +74,15 @@ body {
   --black-color:#1E1E1E;
   --gray-color:#F9F9FB;
 }
+
+*::-webkit-scrollbar {
+  width: 2px;
+  height: 120px;
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(30, 30, 30, 0.15);
+  border-radius: 4px;
+  position: relative;
+}

@@ -40,7 +40,11 @@ export const OperatorDropDown: React.FC<Props> = () => {
   };
 
   return (
-    <DropDown title={"Оператор"} selItem={selItem}>
+    <DropDown
+      title={"Оператор"}
+      selItem={selItem}
+      icon={ <Icons.ArrowDrop/> }
+    >
       <div className={style.DropDown__Menu}>
         <div className={style.DropDown__menu__header}>
           <input type="text" placeholder={"Поиск..."} />

@@ -1,5 +1,4 @@
-import { Search } from "@/components/input/search/Search";
-import { SideMenu } from "@/components/sideMenu/sideMenu";
+import { SideMenu } from "../../components/sideMenu/sideMenu";
 import defaultStyle from "../defaultStyles.module.scss";
 import style from "./ClinicPage.module.scss";
 import { AddClinic } from "./addClinic/addClinic";
@@ -7,15 +6,14 @@ import { Clinic } from "./clinic/Clinic";
 import { useSelector } from "react-redux";
 import type {RootState} from "../../redux/store";
 import {useParams} from "react-router-dom";
-import { PacientPage } from "../PacientsPage/PacientPage";
+import {PacientPage} from "../PacientsPage/PacientPage";
+import {Search} from "@/components/input/search/Search.tsx";
 
 
 export const ClinicPage = () => {
   const clinicList = useSelector((state: RootState) => state.clinicList);
   const params = useParams();
-
   if (params.id != null) return <PacientPage id={Number(params.id)}/>;
-
   return (
     <div className={defaultStyle.Page}>
       <SideMenu action={'Clinic'} />
@@ -30,20 +28,23 @@ export const ClinicPage = () => {
         <div className={style.Table}>
           <table>
             <thead>
-              <tr>
-                <th scope="col">Клиника</th>
-                <th scope="col" className={style.Table__arrow}></th>
-              </tr>
+            <tr>
+              <th scope="col">
+                Клиника
+              </th>
+              <th scope="col" className={style.Table__arrow}>
+              </th>
+            </tr>
             </thead>
             <tbody>
-              {clinicList.map((clinic) => (
-                <Clinic
-                  key={clinic.id}
-                  id={clinic.id}
-                  name={clinic.name}
-                  address={clinic.address}
-                />
-              ))}
+            {clinicList.map((clinic) => (
+              <Clinic
+                key={clinicList.findIndex((element) => element == clinic)}
+                id={clinicList.findIndex((element) => element == clinic)}
+                name={clinic.name ?? ''}
+                address={clinic.address}
+              />
+            ))}
             </tbody>
           </table>
         </div>

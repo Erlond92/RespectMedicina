@@ -1,0 +1,25 @@
+@use '../../../pages/parameters' as *;
+
+
+.Calendar {
+  &__years {
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: scroll;
+    max-height: 250px;
+    max-width: fit-content;
+    padding: 0 12px;
+
+    button {
+      all: unset;
+      justify-content: center;
+      font-weight: 300;
+      font-size: 12px;
+      color: $txtColor;
+    }
+
+    &_select {
+      color: $baseColor;
+    }
+  }
+}

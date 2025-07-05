@@ -18,6 +18,7 @@ export const PacientPage: React.FC<Props> = (props) => {
   const navigate = useNavigate();
   const clinic = useSelector((state: RootState) => state.clinicList[props.id]);
   const pacientList = useSelector((state: RootState) => state.pacientList);
+
   return (
     <div className={defaultStyle.Page}>
       <SideMenu action={"Clinic"} />

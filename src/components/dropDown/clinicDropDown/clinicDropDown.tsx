@@ -41,7 +41,11 @@ export const ClinicDropDown: React.FC<Props> = () => {
   };
 
   return (
-    <DropDown title={"Клиники"} selItem={selItem}>
+    <DropDown
+      title={"Клиники"}
+      selItem={selItem}
+      icon={ <Icons.ArrowDrop/> }
+    >
       <div className={style.DropDown__Menu}>
         <div className={style.DropDown__menu__header}>
           <input type="text" placeholder={"Поиск..."} />

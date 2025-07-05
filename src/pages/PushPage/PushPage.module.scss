@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+.PushPage {
+  padding: 0 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+
+  &__image {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 29px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+
+    h1 {
+      font-weight: 600;
+      font-size: 19px;
+      line-height: 25px;
+      color: #1F1F1F;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 23px;
+      color: #1F1F1F;
+    }
+
+    p {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 17px;
+      color: #1F1F1F;
+    }
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: center;
+
+    &_like, &_claim {
+      width: 100%;
+      max-width: 120px;
+      background-color: #FFFFFF;
+      font-weight: 700;
+      font-size: 12px;
+      text-align: center;
+      padding: 3px 12px;
+      border-radius: 19px;
+    }
+
+    &_like {
+      border: 2px #009100 solid;
+      color: #009100;
+    }
+
+    &_claim {
+      border: 2px #FF584E solid;
+      color: #FF584E;
+    }
+
+  }
+}
+
+.LikePage {
+
+  display: flex;
+  flex-direction: column;
+  gap: 11.33px;
+  align-items: center;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    border: 1.42px #009100 solid;
+    width: 100%;
+    height: 34px;
+    border-radius: 16.99px;
+    max-width: 250px;
+    justify-content: center;
+    align-content: center;
+  }
+
+  &_yandex, &_proDoctor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &_yandex {
+    img:first-child {
+      width: 15.23px;
+      height: 15.17px;
+    }
+
+    img:last-child {
+      width: 65.28px;
+      height: 13.48px;
+    }
+  }
+  &_proDoctor {
+    gap: 4px;
+    img:first-child {
+      width: 12.81px;
+      height: 12.76px;
+    }
+
+    img:last-child {
+      width: 68.12px;
+      height: 6.1px;
+    }
+  }
+  &_twoGIS {
+    img {
+      width: 48.13px;
+      height: auto;
+    }
+  }
+}
+
+.ClaimPush {
+  margin-top: 33.61px;
+  display: flex;
+  flex-direction: column;
+  gap: 28.59px;
+  justify-items: center;
+  align-items: center;
+
+  &__content {
+    margin-top: 22.87px;
+    gap: 0;
+
+    :first-line {
+      margin-bottom: 11.3;
+    }
+  }
+
+  textarea {
+    padding: 5.72px 11.43px;
+    text-align: justify;
+    font-weight: 400;
+    font-size: 10.01px;
+    line-height: 17.15px;
+    width:100%;
+    height: 85.76px;
+
+    border: 0.71px #98B6F1 solid;
+    border-radius: 17.15px;
+  }
+
+  button {
+    max-width: 245.13px;
+    width: 100%;
+    border-radius: 17.15px;
+    font-weight: 700;
+    font-size: 11.43px;
+    line-height: 17.15px;
+    padding: 8.15px 11.43px;
+    color: #fff;
+    background-color: #009100;
+  }
+}
+
+.RespectPush {
+  * {
+    text-align: center;
+  }
+}
+
+:global {
+  body {
+    padding: 0;
+    background-image: url("./img/Background.png");
+    font-family: "Nunito Sans", sans-serif;
+  }
+}
