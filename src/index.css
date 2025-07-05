@@ -18,6 +18,12 @@ body {
   line-height: 140%;
 }
 
+.bodyPush {
+  padding: 0;
+  background-image: url("./img/Background.png");
+  font-family: "Nunito Sans", sans-serif;
+}
+
 #root {
   display: flex;
   justify-content: center;

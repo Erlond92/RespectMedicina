@@ -6,7 +6,6 @@ import {ReviewPage} from "./pages/ReviewPage/ReviewPage";
 import {AnaliticPage} from "@/pages/AnaliticPage/AnaliticPage.tsx";
 import {PushPage} from "@/pages/PushPage/PushPage.tsx";
 
-
 function App() {
   return (
     <BrowserRouter>

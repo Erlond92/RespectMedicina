@@ -141,7 +141,7 @@
     gap: 0;
 
     :first-line {
-      margin-bottom: 11.3;
+      margin-bottom: 11.3px;
     }
   }
 
@@ -177,10 +177,3 @@
   }
 }
 
-:global {
-  body {
-    padding: 0;
-    background-image: url("./img/Background.png");
-    font-family: "Nunito Sans", sans-serif;
-  }
-}

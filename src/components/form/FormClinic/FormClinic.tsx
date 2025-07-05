@@ -52,15 +52,15 @@ export const FormClinic: React.FC<Props> = (props) => {
         });
     };
 
-    const onClick = (e: MouseEvent) => {
+    const onClickOverlay = (e: MouseEvent) => {
         if (overlayRef.current == e.target) {
             props.onClose();
         }
     }
 
     useEffect(() => {
-        document.addEventListener('click', (e) => { onClick(e) });
-        return () => document.removeEventListener('click', (e) => { onClick(e) });
+        document.addEventListener('click', (e) => { onClickOverlay(e) });
+        return () => document.removeEventListener('click', (e) => { onClickOverlay(e) });
     }, []);
 
     return <>
