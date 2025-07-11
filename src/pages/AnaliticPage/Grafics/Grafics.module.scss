@@ -1,0 +1,15 @@
+@use '../../parameters' as *;
+
+.Grafics {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: $bgColor;
+
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    color: $txtColor;
+  }
+}

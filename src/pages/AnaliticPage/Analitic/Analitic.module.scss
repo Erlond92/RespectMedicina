@@ -8,6 +8,30 @@
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
+  gap: 32px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &__download {
+    height: 44px;
+    background: transparent;
+    padding: 10px 16px;
+    border: 1px $baseColor solid;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+    align-content: center;
+
+    p {
+      vertical-align: middle;
+      color: $baseColor;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
 
   &__back {
     display: flex;
@@ -44,19 +68,173 @@
       font-size: 12px;
       line-height: 140%;
     }
+
+    &_other {
+      display: flex;
+      flex-direction: row;
+      align-items: end;
+      gap: 16px;
+    }
   }
 
   header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 24px;
 
     .Search {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       gap: 16px;
+    }
+  }
+
+  &__contract {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &_main {
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+    }
+
+    &_date, &_remain {
+      padding: 12px 16px;
+      border: 1px $baseColor solid;
+      border-radius: 8px;
+
+      h2 {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 100%;
+      }
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+      }
+    }
+
+    &_date {
+      h2, p {
+        color: $baseColor;
+      }
+    }
+
+    &_remain {
+      background-color: $baseColor;
+
+      h2, p {
+        color: #fff;
+      }
+    }
+
+    &_other {
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+    }
+
+    &_item {
+      padding: 12px 16px;
+      border-radius: 8px;
+      background-color: $bgColor;
+      height: min-content;
+      gap: 4px;
+
+      h2 {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 140%;
+        color: $txtColor;
+      }
+      p {
+        text-wrap: nowrap;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        opacity: .7;
+      }
+    }
+  }
+
+  &__Reviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  &__reviews {
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+
+    h2 {
+      font-weight: 600;
+      font-size: 24px;
+      color: $txtColor;
+      margin-bottom: 16px;
+    }
+
+    &_buttons {
+      margin-bottom: 24px;
+
+      &_unselect {
+        font-weight: 500;
+        font-size: 16px;
+        color: $txtColor;
+        opacity: .5;
+        border-bottom: 1px #1E1E1E80 solid;
+        padding: 11px 40px;
+        background-color: #fff;
+      }
+      &_select {
+        font-weight: 500;
+        font-size: 16px;
+        color: $txtColor;
+        border-bottom: 1px $baseColor solid;
+        padding: 11px 40px;
+        background-color: #fff;
+        opacity: 1;
+      }
+    }
+
+    &_list {
+      gap: 24px;
+      justify-items: start;
+    }
+
+    &_review {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      h3 {
+        font-weight: 400;
+        font-size: 16px;
+        color: $txtColor
+      }
+    }
+
+    &_date {
+      font-size: 14px;
+      color: $txtColor;
+      opacity: .5;
+    }
+
+    &_rating {
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+
+      span {
+        font-size: 16px;
+        color: $txtColor;
+        opacity: .5;
+      }
     }
   }
 }

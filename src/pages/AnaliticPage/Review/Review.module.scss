@@ -1,0 +1,76 @@
+@use '../../parameters' as *;
+
+img.TwoGis {
+  width: 83px;
+  height: 24px;
+}
+
+img.ProDoctor {
+  width: 214px;
+  height: 24px;
+}
+
+.Review {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 12px 16px;
+  background-color: $bgColor;
+  border-radius: 8px;
+
+  &__Icon {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__Item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &_content {
+      display: flex;
+      flex-direction: row;
+      gap: 4px;
+
+      h3, p {
+        align-self: end;
+      }
+    }
+
+    h3, p {
+      font-weight: 400;
+      line-height: 140%;
+    }
+
+    h3 {
+      font-size: 24px;
+      color: $txtColor;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    &_good {
+      color: $baseColor;
+    }
+
+    &_error {
+      color: $errorColor;
+    }
+
+    &_title {
+      align-self: unset;
+      color: $txtColor;
+      opacity: .7;
+      text-align: start;
+    }
+
+    &_unvisible {
+      * {
+        opacity: .5;
+      }
+    }
+  }
+}

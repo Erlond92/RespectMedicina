@@ -33,7 +33,7 @@
     &__content {
       z-index: 3;
       left: 0;
-      width: 100%;
+      min-width: 100%;
       height: fit-content;
       border-radius: 12px;
       background-color: $bgColor;

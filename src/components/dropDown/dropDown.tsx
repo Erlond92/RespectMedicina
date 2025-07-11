@@ -30,7 +30,7 @@ export const DropDown: React.FC<Props> = (props) => {
         </button>
         <div
           className={style.DropDown__content}
-          style={{ display: !isVisible ? "none" : "block" }}
+          style={{ display: !isVisible ? "none" : "block"}}
         >
           {props.children}
         </div>

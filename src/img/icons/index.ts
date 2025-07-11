@@ -26,6 +26,10 @@ import { DoctorLike } from "./doctorLike";
 import { Doctor } from "./doctor";
 import { DoctorClaim } from "./doctorClaim";
 import { DoctorRespect } from "./doctorRespect";
+import { SberIcon } from './sber';
+import { YandexMaps } from './yandexMaps'
+import  { NaPopravku } from './naPopravku';
+import { GoogleMaps } from "./googleMaps";
 
 export const Icons = {
   Arrow,
@@ -56,4 +60,8 @@ export const Icons = {
   Doctor,
   DoctorClaim,
   DoctorRespect,
+  SberIcon,
+  YandexMaps,
+  GoogleMaps,
+  NaPopravku,
 };

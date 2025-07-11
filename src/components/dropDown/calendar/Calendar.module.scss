@@ -2,7 +2,11 @@
 
 
 .Calendar {
-  &__years {
+  &__content {
+    display: flex;
+    flex-direction: row;
+  }
+  &__years, &__month {
     display: flex;
     flex-direction: column-reverse;
     overflow-y: scroll;
@@ -10,16 +14,80 @@
     max-width: fit-content;
     padding: 0 12px;
 
-    button {
+    &_select {
+      all: unset;
+      justify-content: center;
+      font-weight: 300;
+      font-size: 12px;
+      color: $baseColor;
+    }
+
+    &_noselect {
       all: unset;
       justify-content: center;
       font-weight: 300;
       font-size: 12px;
       color: $txtColor;
     }
+  }
+
+  &__table {
+    width: 260px;
+    height: 260px;
+    overflow-y: auto;
+
+    &_title {
+      font-size: 12px;
+      font-weight: 400;
+      color: $txtColor;
+      line-height: 20px;
+    }
+
+    &_button {
+      all: unset;
+      font-weight: 400;
+      font-size: 13px;
+      color: $txtColor;
+    }
 
     &_select {
-      color: $baseColor;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background-color: $baseColor;
+      align-self: center;
+      text-align: center;
+      color: #fff;
+    }
+
+    &_unselect {
+
+    }
+
+    table {
+      width: 100%;
+      max-width: 260px;
+      border-spacing:0 5px;
+
+      th, td {
+        width: 28px;
+        height: 28px;
+      }
+      thead {
+        position: sticky;
+        top: 0;
+        background-color: $bgColor;
+        tr {
+          th {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 20px;
+            color: $txtColor;
+            text-align: center;
+          }
+        }
+      }
+
     }
   }
 }

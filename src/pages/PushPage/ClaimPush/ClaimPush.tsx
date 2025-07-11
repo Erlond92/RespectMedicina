@@ -11,7 +11,6 @@ export const ClaimPush: React.FC<Props> = (props) => {
 	const inputRef = useRef(null);
 	const naviget = useNavigate();
 	const onClick = () => {
-		console.log(inputRef.current);
 		naviget('/push/respert')
 	}
 
