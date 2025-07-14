@@ -13,6 +13,8 @@ import { ButtonPrimary } from "@/components/button/primary/ButtonPrimary";
 import { AddPacient } from "../PacientsPage/addPacient/addPacient";
 import { ClinicDropDown } from "@/components/dropDown/clinicDropDown/clinicDropDown";
 import { OperatorDropDown } from "@/components/dropDown/operatoDropDown/operatorDropDown";
+import {Calendar} from "@/components/dropDown/calendar/Calendar.tsx";
+import {InfoVisit} from "@/components/infoVisit/infoVisit.tsx";
 
 export const VisitPage = () => {
   const pacientList = useSelector((state: RootState) => state.pacientList);
@@ -22,6 +24,7 @@ export const VisitPage = () => {
       <SideMenu action={"Visits"} />
 
       <div className={style.PacientPage}>
+        <InfoVisit/>
         <header>
           <h1>Визиты</h1>
 
@@ -32,6 +35,7 @@ export const VisitPage = () => {
         </header>
 
         <div className={style.SelectPanel}>
+          <Calendar/>
           <ClinicDropDown isAddress={false} />
 
           <OperatorDropDown isPro={false} />

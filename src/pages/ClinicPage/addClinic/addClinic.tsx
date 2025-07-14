@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import { AddButton } from "@/components/button/addButton/addButton";
 import { FormClinic } from "@/components/form/FormClinic/FormClinic";
 
@@ -7,9 +7,8 @@ export const AddClinic = () => {
     const onClose = () => {
         setIsClose(!isClose);
     };
-
     return <>
-        <AddButton title={'Добавить клинику'} onClose={onClose} />
+        <AddButton title={'Добавить клинику'} onClose={onClose}/>
         <FormClinic isClose={isClose} onClose={onClose}/>
     </>;
 }

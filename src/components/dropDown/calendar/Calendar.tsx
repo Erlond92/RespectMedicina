@@ -8,8 +8,8 @@ export const Calendar: React.FC = () => {
 	const [ date, setDate ] = useState({
 		year: 3000,
 		date: [{
-			month: 1,
-			day: 1,
+			month: 99,
+			day: 99,
 		}]
 	});
 
@@ -39,7 +39,7 @@ export const Calendar: React.FC = () => {
 			if (dates[0].day < dates[1].day) {
 				return `${toDate(dates[0].day, dates[0].month, year)} - ${toDate(dates[1].day, dates[1].month, year)}`;
 			} else {
-				return `${toDate(dates[0].day, dates[1].month, year)} - ${toDate(dates[1].day, dates[0].month, year)}`;
+				return `${toDate(dates[1].day, dates[1].month, year)} - ${toDate(dates[0].day, dates[0].month, year)}`;
 			}
 		} else {
 			return `${toDate(dates[1].day, dates[1].month, year)} - ${toDate(dates[0].day, dates[0].month, year)}`;
@@ -120,13 +120,23 @@ export const Calendar: React.FC = () => {
 				});
 			} if ( 1 >= l) {
 				e.target.className = `${style.Calendar__table_select} ${style.Calendar__table_button}`;
-				setDate({
-					year: date.year,
-					date: [date.date[0], {
-						month: listMonth.indexOf(month),
-						day: Number(day),
-					}]
-				});
+				if (date.date[0].day == 99 && date.date[0].month == 99) {
+					setDate({
+						year: date.year,
+						date: [{
+							month: listMonth.indexOf(month),
+							day: Number(day),
+						}]
+					});
+				} else {
+					setDate({
+						year: date.year,
+						date: [date.date[0], {
+							month: listMonth.indexOf(month),
+							day: Number(day),
+						}]
+					});
+				}
 			}
 		}
 	}

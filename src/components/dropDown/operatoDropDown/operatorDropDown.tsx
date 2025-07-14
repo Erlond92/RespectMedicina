@@ -7,7 +7,7 @@ import { Icons } from "@/img/icons/index.ts";
 import { Checkbox } from "@/components/input/checkbox/checkbox.tsx";
 
 type Props = {
-  isPro: boolean;
+  isPro: boolean,
 };
 
 export const OperatorDropDown: React.FC<Props> = () => {
@@ -34,7 +34,7 @@ export const OperatorDropDown: React.FC<Props> = () => {
       if (selectItem.length > 0) {
         selSelItem(selectItem[0].name);
       } else {
-        selSelItem("Выберите клинику");
+        selSelItem("Выберите оператора");
       }
     }
   };

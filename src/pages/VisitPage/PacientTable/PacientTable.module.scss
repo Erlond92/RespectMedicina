@@ -3,7 +3,7 @@
 .Table {
   overflow-y: auto;
 
-  table {
+  table:first-child {
     height: 100%;
     width: 100%;
     border-collapse: collapse;
@@ -16,7 +16,6 @@
 
     thead {
       position: sticky;
-      z-index: 2;
       top: 0;
       background-color: $bgColor;
 
@@ -47,6 +46,10 @@
 
         td{
           padding: 0 12px;
+
+          button {
+            background: transparent;
+          }
         }
 
         td:not(:first-child) {

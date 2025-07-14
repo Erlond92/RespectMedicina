@@ -4,6 +4,8 @@ import style from "../PacientTable.module.scss";
 import { Icons } from "@/img/icons";
 import { MessageBubble } from "@/components/ui/message/message";
 import { Remove } from "@/components/ui/remove/remove";
+import {useDispatch} from "react-redux";
+import {getInfoVisit} from "@/redux/infoVisit.ts";
 
 export type Props = {
   name: string;
@@ -15,6 +17,8 @@ export type Props = {
 };
 
 export const PacientVisit: React.FC<Props> = (props) => {
+  const dispatch = useDispatch();
+
   return (
     <>
       <tr>
@@ -22,10 +26,10 @@ export const PacientVisit: React.FC<Props> = (props) => {
           <Checkbox onClick={() => {}} />
         </td>
         <td>
-          <div className={style.Table__pacient}>
+          <button type={'button'} onClick={() => dispatch(getInfoVisit({name: props.name, phone: props.phone, isClose: true}))} className={style.Table__pacient}>
             <h2>{props.name}</h2>
             <h5>{props.phone}</h5>
-          </div>
+          </button>
         </td>
         <td>
           <div className={style.Table__doctor}>
@@ -35,7 +39,7 @@ export const PacientVisit: React.FC<Props> = (props) => {
         </td>
         <td className={style.Table__info}>{props.info}</td>
         <td className={style.Table__icon}>
-          <Icons.Icon />
+            <Icons.Icon />
         </td>
         <td className={style.Table__icon}>
           <MessageBubble n={props.info_visits} />

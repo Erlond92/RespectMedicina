@@ -30,6 +30,7 @@ import { SberIcon } from './sber';
 import { YandexMaps } from './yandexMaps'
 import  { NaPopravku } from './naPopravku';
 import { GoogleMaps } from "./googleMaps";
+import { Exit } from './exit';
 
 export const Icons = {
   Arrow,
@@ -64,4 +65,5 @@ export const Icons = {
   YandexMaps,
   GoogleMaps,
   NaPopravku,
+  Exit,
 };

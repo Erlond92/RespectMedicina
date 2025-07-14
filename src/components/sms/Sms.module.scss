@@ -38,20 +38,18 @@
   }
 
   &__text {
-    opacity: .7;
+    color: rgba(30, 30, 30, 0.7);
 
     &_last {
-      opacity: .5;
+      color: #1E1E1E80;
     }
 
     &_error {
-      color: #E30206;
-      opacity: 1;
+      color: rgba(227, 2, 6, 1);
     }
 
     &_good {
-      opacity: 1;
-      color: #00C878;
+      color: rgba(0, 200, 120, 1);
     }
   }
 }

@@ -1,0 +1,158 @@
+@use '../../pages/parameters.scss' as *;
+
+.Overlay {
+  cursor: unset;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}
+
+.Info {
+  max-height: 762px;
+  border-radius: 12px;
+  padding: 40px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h1 {
+      font-weight: 600;
+      line-height: 100%;
+      font-size: 24px;
+      color: $txtColor;
+    }
+
+    button {
+      opacity: .5;
+      background: transparent;
+    }
+  }
+
+  &__pacinet {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+
+    span {
+      font-size: 19.15px;
+      width: 45px;
+      height: 45px;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      h5 {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        opacity: .5;
+        color: $txtColor;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+        color: $txtColor;
+      }
+    }
+  }
+
+  &__table {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+
+    table {
+      border-collapse: collapse;
+    }
+
+    &_date {
+      display: flex;
+      flex-direction: row;
+      gap: 4px;
+      align-items: center;
+
+      button {
+        height: 16px;
+        align-items: center;
+        background: transparent;
+      }
+    }
+
+    &_name {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      color: $txtColor;
+      min-width: 350px;
+
+      h5 {
+        text-align: start;
+        font-weight: 600;
+        font-size: 13px;
+      }
+
+      p {
+        text-align: start;
+        font-weight: 400;
+        font-size: 12px;
+        text-wrap: nowrap;
+      }
+    }
+
+    &_line {
+      height: 50px;
+      border-bottom: 1px rgba(249, 249, 251, 1) solid;
+
+      th, td {
+        font-size: 13px;
+        line-height: 140%;
+        font-weight: 400;
+        color: rgba(30, 30, 30, 0.7);
+        padding: 7.5px 12px;
+      }
+      th {
+        text-align: center;
+      }
+    }
+
+    tbody {
+      position: sticky;
+      z-index: 1;
+    }
+
+    thead {
+      position: sticky;
+      z-index: 2;
+      tr {
+        th {
+          text-align: start;
+          padding: 14px 12px;
+          opacity: .6;
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 12px;
+          color: $txtColor;
+          vertical-align: middle;
+        }
+      }
+
+    }
+  }
+}
