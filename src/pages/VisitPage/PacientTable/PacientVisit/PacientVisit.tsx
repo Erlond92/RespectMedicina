@@ -2,8 +2,8 @@ import React from "react";
 import { Checkbox } from "@/components/input/checkbox/checkbox";
 import style from "../PacientTable.module.scss";
 import { Icons } from "@/img/icons";
-import { MessageBubble } from "@/components/ui/message/message";
-import { Remove } from "@/components/ui/remove/remove";
+import { MessageBubble } from "@/components/message/message";
+import { Remove } from "@/components/remove/remove";
 import {useDispatch} from "react-redux";
 import {getInfoVisit} from "@/redux/infoVisit.ts";
 

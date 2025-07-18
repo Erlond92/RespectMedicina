@@ -1,0 +1,16 @@
+@use '../../../pages/parameters.scss' as *;
+
+.Button {
+  border-radius: 360px;
+  align-items: center;
+  padding: 8px 12px;
+  background: rgba(30, 30, 30, 0.03);
+  opacity: .5;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  color: $txtColor;
+}

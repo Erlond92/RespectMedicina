@@ -13,6 +13,25 @@ type Props = {
 
 export const Grafics: React.FC<Props> = (props) => {
 	const range = (start: number, end: number) => Array.from({length: (end - start)}, (_v: number, k) => k + start);
+
+	const CustomTooltip = ({ active, payload, label } : {
+		active: any;
+		payload: any;
+		label?: any;
+	}) => {
+		const isVisible = active && payload && payload.length;
+		return (
+			<div className={style.CustomToolKit} style={{ visibility: isVisible ? 'visible' : 'hidden' }}>
+				{isVisible && (
+					<>
+						<h5 className="label">{ props.data[label-1].name }</h5>
+					</>
+				)}
+			</div>
+		);
+	};
+
+
 	return <div className={style.Grafics}>
 		<h1 className={style.Grafics__title}>
 			{ props.title }
@@ -23,7 +42,7 @@ export const Grafics: React.FC<Props> = (props) => {
 					<CartesianGrid vertical={false} stroke="#aaa" strokeDasharray="5 5" />
 					<XAxis ticks={range(1, props.data.length)}/>
 					{(props.title == 'Рейтинг') ? <YAxis domain={[0, 5]} ticks={[0.0, 1.0, 2.0, 3.0, 4.0, 5.0]} width={58}/> : <YAxis width={58}/>}
-					<Tooltip />
+					<Tooltip content={CustomTooltip} />
 					<Line type="monotone" dataKey="prodDoktorov" strokeWidth={2} stroke="#5470C6" name="ПродДокторов" />
 					<Line type="monotone" dataKey="sberZdorovie" strokeWidth={2} stroke="#91CC75" name="СберЗдоровье" />
 					<Line type="monotone" dataKey="yandexKart" strokeWidth={2} stroke="#FAC858" name="Яндекс Карты" />

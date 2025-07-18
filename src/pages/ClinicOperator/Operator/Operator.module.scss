@@ -1,0 +1,65 @@
+@use '../../parameters' as *;
+
+.Operator {
+  border-radius: 12px;
+  padding: 12px;
+  background-color: $bgColor;
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    h1 {
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 1.4;
+      color: $txtColor;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1.4;
+      color: $txtColor;
+    }
+  }
+
+  .DropDown {
+    border-radius: 12px;
+    background-color: $bgColor;
+    padding: 4px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    box-shadow: 0 4px 16px 0 #E3E3E3;
+
+    span {
+      padding: 9px 12px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+
+      color: $txtColor;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+
+        path {
+          stroke: $txtColor;
+        }
+      }
+    }
+  }
+}

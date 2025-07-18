@@ -14,6 +14,7 @@
 }
 
 .Form {
+  box-sizing: content-box;
   z-index: 1000;
   align-self: anchor-center;
   justify-self: center;
@@ -29,6 +30,7 @@
   border-radius: 12px;
 
   h1 {
+    text-wrap: nowrap;
     text-align: center;
     font-weight: 600;
     color: $txtColor;

@@ -5,6 +5,7 @@ import {VisitPage} from "./pages/VisitPage/VisitPage";
 import {ReviewPage} from "./pages/ReviewPage/ReviewPage";
 import {AnaliticPage} from "@/pages/AnaliticPage/AnaliticPage.tsx";
 import {PushPage} from "@/pages/PushPage/PushPage.tsx";
+import {ClinicOperato} from "@/pages/ClinicOperator/ClinicOperator.tsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path={'/reviews'} element={<ReviewPage/>}/>
         <Route path={'/analitic'} element={<AnaliticPage/>}/>
         <Route path={'/analitic/:id'} element={<AnaliticPage />} />
+				<Route path={'/clinicOperator/'} element={<ClinicOperato clinicId={1} />} />
         <Route path={'/push'} element={<PushPage name={"Наталья"} title={'Main'} />} />
         <Route path={'/push/like'} element={<PushPage name={"Наталья"} title={'Like'} />} />
         <Route path={'/push/claim'} element={<PushPage name={"Наталья"} title={'Claim'} />} />

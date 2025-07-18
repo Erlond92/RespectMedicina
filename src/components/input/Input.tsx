@@ -3,7 +3,7 @@ import { Icons } from "@/img/icons";
 import React, { useState } from "react";
 
 export interface InputProps {
-  type: "login" | "password" | string;
+  type: "login" | "password" | 'email' | string;
   value: string;
   placeholder?: string;
   error?: boolean;
@@ -27,7 +27,7 @@ export const Input: React.FC<InputProps> = ({value, type, placeholder, error,onI
     >
       <input
         id={type}
-        type={type === "password" && !showPassword ? "password" : "text"}
+        type={type === "password" && !showPassword ? "password" : (type=='email') ? 'email' : "text"}
         name={type}
         value={value}
         placeholder={placeholder}

@@ -1,12 +1,12 @@
 import { Icons } from "@/img/icons";
 import { useSelector } from "react-redux";
 import type { RootState } from "../../../redux/store";
-import { Rate } from "@/components/ui/rate/rate";
+import { Rate } from "@/components/rate/rate";
 import style from "./ReviewTable.module.scss";
-import { Reviews } from "@/components/ui/review/review";
-import { Bonus } from "@/components/ui/bonus/bonus";
-import { MessageBubble } from "@/components/ui/message/message";
-import { Remove } from "@/components/ui/remove/remove";
+import { Reviews } from "@/components/review/review";
+import { Bonus } from "@/components/bonus/bonus";
+import { MessageBubble } from "@/components/message/message";
+import { Remove } from "@/components/remove/remove";
 
 export const ReviewTable = () => {
   const reviewList = useSelector((state: RootState) => state.reviewList);

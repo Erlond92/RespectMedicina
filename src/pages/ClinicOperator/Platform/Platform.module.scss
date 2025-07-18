@@ -1,0 +1,16 @@
+@use '../../parameters' as *;
+
+.Platform {
+  border-radius: 12px;
+  padding: 14px 12px;
+  background-color: $bgColor;
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &_unselect {
+  }
+}

@@ -1,0 +1,42 @@
+@use '../../../pages/parameters.scss' as *;
+
+.Title {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+
+  &__Name {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    h1 {
+      text-transform: capitalize;
+      font-weight: 600;
+      font-size: 32px;
+      color: $txtColor;
+    }
+
+    &_address {
+      display: flex;
+      flex-direction: row;
+
+      span {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.4;
+        color: $txtColor;
+      }
+
+      span:first-child {
+        padding-right: 8px;
+        border-right: 4px rgba(30, 30, 30, 0.05) dotted;
+      }
+
+      span:last-child {
+        padding-left: 8px;
+      }
+    }
+  }
+
+}

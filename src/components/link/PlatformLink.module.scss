@@ -1,0 +1,14 @@
+.Link {
+  display: flex;
+  align-items: center;
+
+  &_select{
+
+    pointer-events: none;
+    svg {
+      path {
+        stroke: #D9DAE1;
+      }
+    }
+  }
+}

@@ -3,20 +3,21 @@ import style from "./addButton.module.scss";
 
 type Props = {
   title: string;
-  children?: React.ReactNode;
   onClose: () => void;
+	width?: number,
 };
 
-export const AddButton: React.FC<Props> = ({ title, onClose }) => {
+export const AddButton: React.FC<Props> = (props) => {
   return (
     <button
       className={style.AddClinic}
       onClick={() => {
-        onClose();
+        props.onClose();
       }}
+			style={{width: (props.width != null) ? props.width : 'auto' }}
     >
       <Icons.PlusIcon />
-      {title}
+      {props.title}
     </button>
   );
 };

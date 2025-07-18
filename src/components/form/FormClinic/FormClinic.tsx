@@ -27,6 +27,7 @@ export const FormClinic: React.FC<Props> = (props) => {
 				});
 			if (formData.get('name') == '' && formData.get('city') == '' && formData.get('address') == '') return;
 			distpach(addClinic({
+				type: '',
 				id: Number(new Date().toLocaleDateString()),
 				name: formData.get('name'),
 				address: `г. ${formData.get('city')}, ${formData.get('address')}`,

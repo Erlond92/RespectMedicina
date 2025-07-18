@@ -31,6 +31,10 @@ import { YandexMaps } from './yandexMaps'
 import  { NaPopravku } from './naPopravku';
 import { GoogleMaps } from "./googleMaps";
 import { Exit } from './exit';
+import { BackButtonIcon } from "./backButtonIcon";
+import { Change } from "@/img/icons/change";
+import { Trash } from './trash';
+import { LinkIcon } from "@/img/icons/LinkIcon";
 
 export const Icons = {
   Arrow,
@@ -66,4 +70,8 @@ export const Icons = {
   GoogleMaps,
   NaPopravku,
   Exit,
+	BackButtonIcon,
+	Change,
+	Trash,
+	LinkIcon,
 };

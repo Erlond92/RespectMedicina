@@ -1,0 +1,42 @@
+@use '../../pages/parameters' as *;
+
+.Radio {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+
+  &__unselect, &__select {
+    width: 32px;
+    height: 20px;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+
+    span {
+      background-color: #fff;
+      display: block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+  }
+
+  &__unselect {
+    background-color: #D9DAE1;
+    border: 4px #D9DAE1 solid;
+    border-right: 16px #D9DAE1 solid;
+  }
+
+  &__select {
+    background-color: $baseColor;
+    border: 4px $baseColor solid;
+    border-left: 16px $baseColor solid;
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.4;
+    color: $txtColor;
+  }
+}
