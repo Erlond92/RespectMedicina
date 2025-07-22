@@ -1,5 +1,5 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import {AuthorizationPage} from "./pages/authorization/Authorization";
+import {AuthorizationPage} from "./pages/Аuthorization/Authorization";
 import {ClinicPage} from "./pages/ClinicPage/ClinicPage";
 import {VisitPage} from "./pages/VisitPage/VisitPage";
 import {ReviewPage} from "./pages/ReviewPage/ReviewPage";

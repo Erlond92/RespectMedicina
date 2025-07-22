@@ -14,6 +14,9 @@ import {FormOperator} from "@/components/form/FormOperator/FormOperator.tsx";
 import {FormChangeOperator} from "@/components/form/FormChangeOperator/FormChangeOperator.tsx";
 import {SmsState} from "@/pages/ClinicOperator/SmsState/SmsState.tsx";
 import {MessageState} from "@/pages/ClinicOperator/MessageState/MessageState.tsx";
+import {CustomRadio} from "@/components/customRadio/CustomRadio.tsx";
+import React from 'react';
+import {SendMessageForm} from "@/components/form/SendMessageForm/SendMessageForm.tsx";
 
 type Props = {
 	clinicId: number,
@@ -24,6 +27,13 @@ export const ClinicOperato = (props: Props) => {
 	const [ type, setType ] = useState('platforms');
 	const [ visibleOperator, setVisibleOperator ] = useState(false);
 	const [ visibleChange, setVisibleChange ] = useState(-1);
+	const [ isActiveSms, setIsActiveSms ] = useState(true);
+	const [ close, setClose ] = useState(false);
+
+	const  getIsActiveSms = (onClick: boolean) => {
+		if (onClick) setIsActiveSms(!isActiveSms);
+		return isActiveSms;
+	}
 
 	type PlatformLinkType = {
 		name: string,
@@ -52,6 +62,7 @@ export const ClinicOperato = (props: Props) => {
 	]
 
 	return <div className={defaultStyle.Page}>
+		<SendMessageForm isClose={close} onClose={() => setClose(false)} id={1}/>
 		<SideMenu action={'Clinic'} />
 		<div className={style.ClinicOperator}>
 			<header className={style.ClinicOperator_item}>
@@ -61,8 +72,12 @@ export const ClinicOperato = (props: Props) => {
 						<ClinicTitle clinicId={props.clinicId}/>
 					</div>
 					<div className={style.ClinicOperator__title_button}>
-						<Icons.Change/>
-						<Icons.Trash/>
+						<button type={'button'} onClick={() => setClose(true)}>
+							<Icons.Change/>
+						</button>
+						<button type={'button'}>
+							<Icons.Trash/>
+						</button>
 					</div>
 				</div>
 				<div className={style.ClinicOperator__content}>
@@ -80,12 +95,12 @@ export const ClinicOperato = (props: Props) => {
 					</div>
 					<div>
 						<p>SMS (отправлено / договор)</p>
-						<input type="radio"/>
+						<CustomRadio name={''} isActive={getIsActiveSms}/>
 					</div>
 				</div>
 			</header>
 
-			<div className={style.ClinicOperator_item}>
+			<div className={`${style.ClinicOperator_item} ${style.ClinicOperator_item_content}`}>
 				<div className={style.ClinicOperator__main}>
 					<div className={style.ClinicOperator__main_switches}>
 						<p
@@ -108,13 +123,15 @@ export const ClinicOperato = (props: Props) => {
 
 					<div className={style.ClinicOperator__main_content}>
 						{ (type == 'platforms') ? PlatformLink.map((element) => {
-							return <Platform name={element.name} link={element.link}/>
+							return <React.Fragment key={PlatformLink.indexOf(element)}>
+								<Platform name={element.name} link={element.link}/>
+							</React.Fragment>
 						}) : <></> }
 						{ (type=='operator') ? <>
 						{ OperatorList.map((element) => {
-							return <>
+							return <React.Fragment key={OperatorList.indexOf(element)}>
 								<Operator name={element.name} email={element.email} id={element.id} changeOperator={() => setVisibleChange(element.id)}/>
-							</>
+							</React.Fragment>
 						}) }
 							<AddButton title={'Добавить оператора'} onClose={() => setVisibleOperator(true)} width={244}/>
 						{ (visibleOperator) ? <FormOperator onClose={() => setVisibleOperator(false)} isClose={visibleOperator}/> : <></> }

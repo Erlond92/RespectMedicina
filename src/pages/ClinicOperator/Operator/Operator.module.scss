@@ -1,10 +1,10 @@
 @use '../../parameters' as *;
 
 .Operator {
+  max-width: 350px;
   border-radius: 12px;
   padding: 12px;
   background-color: $bgColor;
-  max-width: 350px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -41,12 +41,12 @@
     gap: 0;
     box-shadow: 0 4px 16px 0 #E3E3E3;
 
-    span {
+    button {
       padding: 9px 12px;
       display: flex;
       flex-direction: row;
       gap: 10px;
-
+      background: transparent;
       color: $txtColor;
       font-weight: 400;
       font-size: 14px;

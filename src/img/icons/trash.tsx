@@ -1,6 +1,6 @@
 export const Trash = ({...props}) => {
 	return <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-		<g clip-path="url(#clip0_312_5503)">
+		<g clipPath="url(#clip0_312_5503)">
 			<path d="M5.33301 9.83331H26.6663" stroke="#1E1E1E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
 			<path d="M13.333 15.1667V23.1667" stroke="#1E1E1E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
 			<path d="M18.667 15.1667V23.1667" stroke="#1E1E1E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

@@ -8,6 +8,7 @@ type Props = {
 		prodDoktorov: number,
 		sberZdorovie: number,
 		twoGis: number
+		yandexKart: number,
 	}[],
 }
 
@@ -24,7 +25,55 @@ export const Grafics: React.FC<Props> = (props) => {
 			<div className={style.CustomToolKit} style={{ visibility: isVisible ? 'visible' : 'hidden' }}>
 				{isVisible && (
 					<>
-						<h5 className="label">{ props.data[label-1].name }</h5>
+						<h5 className={style.CustomToolKit_title}>{ props.data[label-1].name }</h5>
+						<div className={style.CustomToolKit__Content}>
+							<span className={style.CustomToolKit__Content}>
+								<div className={style.CustomToolKit__Content__item}>
+									<div className={style.CustomToolKit__Name}>
+										<span className={style.CustomToolKit_radio} style={{ backgroundColor: '#117DC1' }}></span>
+										<p className={style.CustomToolKit_name}>
+											ПроДокторов
+										</p>
+									</div>
+									<p className={style.CustomToolKit_count}>
+										{  props.data[label-1].prodDoktorov }
+									</p>
+								</div>
+								<div className={style.CustomToolKit__Content__item}>
+									<div className={style.CustomToolKit__Name}>
+										<span className={style.CustomToolKit_radio} style={{ backgroundColor: '#FF0D65' }}></span>
+										<p className={style.CustomToolKit_name}>
+											СберЗдоровье
+										</p>
+									</div>
+									<p className={style.CustomToolKit_count}>
+										{  props.data[label-1].sberZdorovie }
+									</p>
+								</div>
+								<div className={style.CustomToolKit__Content__item}>
+									<div className={style.CustomToolKit__Name}>
+										<span className={style.CustomToolKit_radio} style={{ backgroundColor: '#FF4230' }}></span>
+										<p className={style.CustomToolKit_name}>
+											Яндекс Карты
+										</p>
+									</div>
+									<p className={style.CustomToolKit_count}>
+										{  props.data[label-1].yandexKart }
+									</p>
+								</div>
+								<div className={style.CustomToolKit__Content__item}>
+									<div className={style.CustomToolKit__Name}>
+										<span className={style.CustomToolKit_radio} style={{ backgroundColor: '#FFB919' }}></span>
+										<p className={style.CustomToolKit_name}>
+											2гис
+										</p>
+									</div>
+									<p className={style.CustomToolKit_count}>
+										{  props.data[label-1].twoGis }
+									</p>
+								</div>
+							</span>
+						</div>
 					</>
 				)}
 			</div>

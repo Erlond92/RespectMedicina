@@ -10,6 +10,7 @@ type Props = {
 
 export const ClinicTitle: React.FC<Props> = (props) => {
 	const clinicInfo = useSelector((state: RootState) => state.clinicList.filter((element) => element.id == props.clinicId)[0]);
+
 	return <div className={style.Title}>
 		<UserAvatar symbol={clinicInfo.name[0]}/>
 		<div className={style.Title__Name}>

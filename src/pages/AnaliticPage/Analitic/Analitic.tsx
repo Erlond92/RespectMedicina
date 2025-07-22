@@ -83,71 +83,71 @@ export const Analitic: React.FC<Props> = (props)  => {
 	}
 
 	const dataRating = [
-		{ name: '1', prodDoktorov: 4.0, sberZdorovie: 3.0, yandexKart: 0.5, twoGis: 0.1 },
-		{ name: '2', prodDoktorov: 3.8, sberZdorovie: 3.1, yandexKart: 0.7, twoGis: 0.2 },
-		{ name: '3', prodDoktorov: 3.9, sberZdorovie: 3.0, yandexKart: 2.1, twoGis: 0.5 },
-		{ name: '4', prodDoktorov: 4.1, sberZdorovie: 3.2, yandexKart: 0.9, twoGis: 0.3 },
-		{ name: '5', prodDoktorov: 3.7, sberZdorovie: 2.9, yandexKart: 1.2, twoGis: 0.4 },
-		{ name: '6', prodDoktorov: 3.6, sberZdorovie: 3.0, yandexKart: 1.5, twoGis: 0.6 },
-		{ name: '7', prodDoktorov: 3.8, sberZdorovie: 3.1, yandexKart: 1.8, twoGis: 0.7 },
-		{ name: '8', prodDoktorov: 4.0, sberZdorovie: 3.3, yandexKart: 2.0, twoGis: 0.8 },
-		{ name: '9', prodDoktorov: 3.9, sberZdorovie: 3.2, yandexKart: 1.7, twoGis: 0.6 },
-		{ name: '10', prodDoktorov: 4.2, sberZdorovie: 3.4, yandexKart: 2.2, twoGis: 0.9 },
-		{ name: '11', prodDoktorov: 4.1, sberZdorovie: 3.5, yandexKart: 2.5, twoGis: 1.0 },
-		{ name: '12', prodDoktorov: 4.3, sberZdorovie: 3.6, yandexKart: 2.8, twoGis: 1.2 },
-		{ name: '13', prodDoktorov: 4.0, sberZdorovie: 3.4, yandexKart: 2.3, twoGis: 0.9 },
-		{ name: '14', prodDoktorov: 3.8, sberZdorovie: 3.2, yandexKart: 1.9, twoGis: 0.7 },
-		{ name: '15', prodDoktorov: 3.7, sberZdorovie: 3.1, yandexKart: 1.6, twoGis: 0.5 },
-		{ name: '16', prodDoktorov: 3.9, sberZdorovie: 3.3, yandexKart: 2.0, twoGis: 0.8 },
-		{ name: '17', prodDoktorov: 4.1, sberZdorovie: 3.5, yandexKart: 2.4, twoGis: 1.1 },
-		{ name: '18', prodDoktorov: 4.2, sberZdorovie: 3.6, yandexKart: 2.7, twoGis: 1.3 },
-		{ name: '19', prodDoktorov: 4.0, sberZdorovie: 3.4, yandexKart: 2.2, twoGis: 1.0 },
-		{ name: '20', prodDoktorov: 3.8, sberZdorovie: 3.2, yandexKart: 1.8, twoGis: 0.8 },
-		{ name: '21', prodDoktorov: 3.6, sberZdorovie: 3.0, yandexKart: 1.5, twoGis: 0.6 },
-		{ name: '22', prodDoktorov: 3.7, sberZdorovie: 3.1, yandexKart: 1.7, twoGis: 0.7 },
-		{ name: '23', prodDoktorov: 3.9, sberZdorovie: 3.3, yandexKart: 2.0, twoGis: 0.9 },
-		{ name: '24', prodDoktorov: 4.1, sberZdorovie: 3.5, yandexKart: 2.3, twoGis: 1.1 },
-		{ name: '25', prodDoktorov: 4.2, sberZdorovie: 3.6, yandexKart: 2.6, twoGis: 1.3 },
-		{ name: '26', prodDoktorov: 4.0, sberZdorovie: 3.4, yandexKart: 2.1, twoGis: 1.0 },
-		{ name: '27', prodDoktorov: 3.8, sberZdorovie: 3.2, yandexKart: 1.7, twoGis: 0.8 },
-		{ name: '28', prodDoktorov: 3.7, sberZdorovie: 3.1, yandexKart: 1.4, twoGis: 0.6 },
-		{ name: '29', prodDoktorov: 3.9, sberZdorovie: 3.3, yandexKart: 1.8, twoGis: 0.7 },
-		{ name: '30', prodDoktorov: 4.1, sberZdorovie: 3.5, yandexKart: 2.2, twoGis: 0.9 },
-		{ name: '31', prodDoktorov: 4.3, sberZdorovie: 3.7, yandexKart: 2.5, twoGis: 1.1 }
+		{ name: '1.05.2025', prodDoktorov: 4.0, sberZdorovie: 3.0, yandexKart: 0.5, twoGis: 0.1 },
+		{ name: '2.05.2025', prodDoktorov: 3.8, sberZdorovie: 3.1, yandexKart: 0.7, twoGis: 0.2 },
+		{ name: '3.05.2025', prodDoktorov: 3.9, sberZdorovie: 3.0, yandexKart: 2.1, twoGis: 0.5 },
+		{ name: '4.05.2025', prodDoktorov: 4.1, sberZdorovie: 3.2, yandexKart: 0.9, twoGis: 0.3 },
+		{ name: '5.05.2025', prodDoktorov: 3.7, sberZdorovie: 2.9, yandexKart: 1.2, twoGis: 0.4 },
+		{ name: '6.05.2025', prodDoktorov: 3.6, sberZdorovie: 3.0, yandexKart: 1.5, twoGis: 0.6 },
+		{ name: '7.05.2025', prodDoktorov: 3.8, sberZdorovie: 3.1, yandexKart: 1.8, twoGis: 0.7 },
+		{ name: '8.05.2025', prodDoktorov: 4.0, sberZdorovie: 3.3, yandexKart: 2.0, twoGis: 0.8 },
+		{ name: '9.05.2025', prodDoktorov: 3.9, sberZdorovie: 3.2, yandexKart: 1.7, twoGis: 0.6 },
+		{ name: '10.05.2025', prodDoktorov: 4.2, sberZdorovie: 3.4, yandexKart: 2.2, twoGis: 0.9 },
+		{ name: '11.05.2025', prodDoktorov: 4.1, sberZdorovie: 3.5, yandexKart: 2.5, twoGis: 1.0 },
+		{ name: '12.05.2025', prodDoktorov: 4.3, sberZdorovie: 3.6, yandexKart: 2.8, twoGis: 1.2 },
+		{ name: '13.05.2025', prodDoktorov: 4.0, sberZdorovie: 3.4, yandexKart: 2.3, twoGis: 0.9 },
+		{ name: '14.05.2025', prodDoktorov: 3.8, sberZdorovie: 3.2, yandexKart: 1.9, twoGis: 0.7 },
+		{ name: '15.05.2025', prodDoktorov: 3.7, sberZdorovie: 3.1, yandexKart: 1.6, twoGis: 0.5 },
+		{ name: '16.05.2025', prodDoktorov: 3.9, sberZdorovie: 3.3, yandexKart: 2.0, twoGis: 0.8 },
+		{ name: '17.05.2025', prodDoktorov: 4.1, sberZdorovie: 3.5, yandexKart: 2.4, twoGis: 1.1 },
+		{ name: '18.05.2025', prodDoktorov: 4.2, sberZdorovie: 3.6, yandexKart: 2.7, twoGis: 1.3 },
+		{ name: '19.05.2025', prodDoktorov: 4.0, sberZdorovie: 3.4, yandexKart: 2.2, twoGis: 1.0 },
+		{ name: '20.05.2025', prodDoktorov: 3.8, sberZdorovie: 3.2, yandexKart: 1.8, twoGis: 0.8 },
+		{ name: '21.05.2025', prodDoktorov: 3.6, sberZdorovie: 3.0, yandexKart: 1.5, twoGis: 0.6 },
+		{ name: '22.05.2025', prodDoktorov: 3.7, sberZdorovie: 3.1, yandexKart: 1.7, twoGis: 0.7 },
+		{ name: '23.05.2025', prodDoktorov: 3.9, sberZdorovie: 3.3, yandexKart: 2.0, twoGis: 0.9 },
+		{ name: '24.05.2025', prodDoktorov: 4.1, sberZdorovie: 3.5, yandexKart: 2.3, twoGis: 1.1 },
+		{ name: '25.05.2025', prodDoktorov: 4.2, sberZdorovie: 3.6, yandexKart: 2.6, twoGis: 1.3 },
+		{ name: '26.05.2025', prodDoktorov: 4.0, sberZdorovie: 3.4, yandexKart: 2.1, twoGis: 1.0 },
+		{ name: '27.05.2025', prodDoktorov: 3.8, sberZdorovie: 3.2, yandexKart: 1.7, twoGis: 0.8 },
+		{ name: '28.05.2025', prodDoktorov: 3.7, sberZdorovie: 3.1, yandexKart: 1.4, twoGis: 0.6 },
+		{ name: '29.05.2025', prodDoktorov: 3.9, sberZdorovie: 3.3, yandexKart: 1.8, twoGis: 0.7 },
+		{ name: '30.05.2025', prodDoktorov: 4.1, sberZdorovie: 3.5, yandexKart: 2.2, twoGis: 0.9 },
+		{ name: '31.05.2025', prodDoktorov: 4.3, sberZdorovie: 3.7, yandexKart: 2.5, twoGis: 1.1 }
 	];
 
 	const dataTwo = [
-		{ name: '1', prodDoktorov: 15, sberZdorovie: 25, yandexKart: 35, twoGis: 10 },
-		{ name: '2', prodDoktorov: 18, sberZdorovie: 28, yandexKart: 36, twoGis: 12 },
-		{ name: '3', prodDoktorov: 20, sberZdorovie: 30, yandexKart: 37, twoGis: 21 }, // Соответствует значению из всплывающей подсказки
-		{ name: '4', prodDoktorov: 22, sberZdorovie: 32, yandexKart: 38, twoGis: 23 },
-		{ name: '5', prodDoktorov: 25, sberZdorovie: 35, yandexKart: 40, twoGis: 25 },
-		{ name: '6', prodDoktorov: 27, sberZdorovie: 37, yandexKart: 42, twoGis: 27 },
-		{ name: '7', prodDoktorov: 29, sberZdorovie: 39, yandexKart: 45, twoGis: 29 },
-		{ name: '8', prodDoktorov: 30, sberZdorovie: 40, yandexKart: 47, twoGis: 30 },
-		{ name: '9', prodDoktorov: 32, sberZdorovie: 42, yandexKart: 48, twoGis: 32 },
-		{ name: '10', prodDoktorov: 35, sberZdorovie: 45, yandexKart: 50, twoGis: 35 },
-		{ name: '11', prodDoktorov: 37, sberZdorovie: 47, yandexKart: 48, twoGis: 37 },
-		{ name: '12', prodDoktorov: 39, sberZdorovie: 49, yandexKart: 45, twoGis: 39 },
-		{ name: '13', prodDoktorov: 40, sberZdorovie: 50, yandexKart: 42, twoGis: 40 },
-		{ name: '14', prodDoktorov: 38, sberZdorovie: 48, yandexKart: 40, twoGis: 38 },
-		{ name: '15', prodDoktorov: 35, sberZdorovie: 45, yandexKart: 38, twoGis: 35 },
-		{ name: '16', prodDoktorov: 33, sberZdorovie: 43, yandexKart: 35, twoGis: 33 },
-		{ name: '17', prodDoktorov: 30, sberZdorovie: 40, yandexKart: 32, twoGis: 30 },
-		{ name: '18', prodDoktorov: 28, sberZdorovie: 38, yandexKart: 30, twoGis: 28 },
-		{ name: '19', prodDoktorov: 25, sberZdorovie: 35, yandexKart: 28, twoGis: 25 },
-		{ name: '20', prodDoktorov: 23, sberZdorovie: 33, yandexKart: 25, twoGis: 23 },
-		{ name: '21', prodDoktorov: 20, sberZdorovie: 30, yandexKart: 22, twoGis: 20 },
-		{ name: '22', prodDoktorov: 18, sberZdorovie: 28, yandexKart: 20, twoGis: 18 },
-		{ name: '23', prodDoktorov: 15, sberZdorovie: 25, yandexKart: 18, twoGis: 15 },
-		{ name: '24', prodDoktorov: 13, sberZdorovie: 23, yandexKart: 16, twoGis: 13 },
-		{ name: '25', prodDoktorov: 10, sberZdorovie: 20, yandexKart: 14, twoGis: 10 },
-		{ name: '26', prodDoktorov: 8, sberZdorovie: 18, yandexKart: 12, twoGis: 8 },
-		{ name: '27', prodDoktorov: 6, sberZdorovie: 16, yandexKart: 10, twoGis: 6 },
-		{ name: '28', prodDoktorov: 4, sberZdorovie: 14, yandexKart: 8, twoGis: 4 },
-		{ name: '29', prodDoktorov: 2, sberZdorovie: 12, yandexKart: 6, twoGis: 2 },
-		{ name: '30', prodDoktorov: 1, sberZdorovie: 10, yandexKart: 4, twoGis: 1 },
-		{ name: '31', prodDoktorov: 0, sberZdorovie: 8, yandexKart: 2, twoGis: 0 }
+		{ name: '1.05.2025', prodDoktorov: 15, sberZdorovie: 25, yandexKart: 35, twoGis: 10 },
+		{ name: '2.05.2025', prodDoktorov: 18, sberZdorovie: 28, yandexKart: 36, twoGis: 12 },
+		{ name: '3.05.2025', prodDoktorov: 20, sberZdorovie: 30, yandexKart: 37, twoGis: 21 }, // Соответствует значению из всплывающей подсказки
+		{ name: '4.05.2025', prodDoktorov: 22, sberZdorovie: 32, yandexKart: 38, twoGis: 23 },
+		{ name: '5.05.2025', prodDoktorov: 25, sberZdorovie: 35, yandexKart: 40, twoGis: 25 },
+		{ name: '6.05.2025', prodDoktorov: 27, sberZdorovie: 37, yandexKart: 42, twoGis: 27 },
+		{ name: '7.05.2025', prodDoktorov: 29, sberZdorovie: 39, yandexKart: 45, twoGis: 29 },
+		{ name: '8.05.2025', prodDoktorov: 30, sberZdorovie: 40, yandexKart: 47, twoGis: 30 },
+		{ name: '9.05.2025', prodDoktorov: 32, sberZdorovie: 42, yandexKart: 48, twoGis: 32 },
+		{ name: '10.05.2025', prodDoktorov: 35, sberZdorovie: 45, yandexKart: 50, twoGis: 35 },
+		{ name: '11.05.2025', prodDoktorov: 37, sberZdorovie: 47, yandexKart: 48, twoGis: 37 },
+		{ name: '12.05.2025', prodDoktorov: 39, sberZdorovie: 49, yandexKart: 45, twoGis: 39 },
+		{ name: '13.05.2025', prodDoktorov: 40, sberZdorovie: 50, yandexKart: 42, twoGis: 40 },
+		{ name: '14.05.2025', prodDoktorov: 38, sberZdorovie: 48, yandexKart: 40, twoGis: 38 },
+		{ name: '15.05.2025', prodDoktorov: 35, sberZdorovie: 45, yandexKart: 38, twoGis: 35 },
+		{ name: '16.05.2025', prodDoktorov: 33, sberZdorovie: 43, yandexKart: 35, twoGis: 33 },
+		{ name: '17.05.2025', prodDoktorov: 30, sberZdorovie: 40, yandexKart: 32, twoGis: 30 },
+		{ name: '18.05.2025', prodDoktorov: 28, sberZdorovie: 38, yandexKart: 30, twoGis: 28 },
+		{ name: '19.05.2025', prodDoktorov: 25, sberZdorovie: 35, yandexKart: 28, twoGis: 25 },
+		{ name: '20.05.2025', prodDoktorov: 23, sberZdorovie: 33, yandexKart: 25, twoGis: 23 },
+		{ name: '21.05.2025', prodDoktorov: 20, sberZdorovie: 30, yandexKart: 22, twoGis: 20 },
+		{ name: '22.05.2025', prodDoktorov: 18, sberZdorovie: 28, yandexKart: 20, twoGis: 18 },
+		{ name: '23.05.2025', prodDoktorov: 15, sberZdorovie: 25, yandexKart: 18, twoGis: 15 },
+		{ name: '24.05.2025', prodDoktorov: 13, sberZdorovie: 23, yandexKart: 16, twoGis: 13 },
+		{ name: '25.05.2025', prodDoktorov: 10, sberZdorovie: 20, yandexKart: 14, twoGis: 10 },
+		{ name: '26.05.2025', prodDoktorov: 8, sberZdorovie: 18, yandexKart: 12, twoGis: 8 },
+		{ name: '27.05.2025', prodDoktorov: 6, sberZdorovie: 16, yandexKart: 10, twoGis: 6 },
+		{ name: '28.05.2025', prodDoktorov: 4, sberZdorovie: 14, yandexKart: 8, twoGis: 4 },
+		{ name: '29.05.2025', prodDoktorov: 2, sberZdorovie: 12, yandexKart: 6, twoGis: 2 },
+		{ name: '30.05.2025', prodDoktorov: 1, sberZdorovie: 10, yandexKart: 4, twoGis: 1 },
+		{ name: '31.05.2025', prodDoktorov: 0, sberZdorovie: 8, yandexKart: 2, twoGis: 0 }
 	];
 
 	type ReviewsProps = {
@@ -158,7 +158,6 @@ export const Analitic: React.FC<Props> = (props)  => {
 	}
 
 	const reviewsData: ReviewsProps[] = [
-		// Существующие отзывы (положительные и средние)
 		{
 			rating: 5,
 			name: "Виктория Мельникова",
@@ -327,7 +326,7 @@ export const Analitic: React.FC<Props> = (props)  => {
 									return element.rating <= 3;
 							}
 						}).map((review) => {
-							return <li className={style.Analitic__reviews_review}>
+							return <li key={reviewsData.indexOf(review)} className={style.Analitic__reviews_review}>
 								<h3>{ review.name }</h3>
 								<p className={style.Analitic__reviews_date}>{ review.date }</p>
 								<div className={style.Analitic__reviews_rating}>

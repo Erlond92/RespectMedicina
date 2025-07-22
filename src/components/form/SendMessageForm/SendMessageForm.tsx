@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import style from "../Form.module.scss";
 import { Input } from "@/components/input/Input";
+import {InputFloatingLabel} from "@/components/input/inpuFloatingLable/inputFloatingLabel.tsx";
 
 type Props = {
 	isClose: boolean,
@@ -58,7 +59,7 @@ export const SendMessageForm: React.FC<Props> = (props) => {
 				<div className={style.Form__input}>
 					<Input type={'name'} value={values.name} placeholder={'Имя'}
 								 onInput={(name: string, value: string) => changeValues(name, value)}/>
-					<Input type={'sms'} value={values.sms} placeholder={'По договору'}
+					<InputFloatingLabel type={'sms'} value={values.sms} placeholder={'По договору'}
 								 onInput={(name: string, value: string) => changeValues(name, value)}/>
 				</div>
 				<div className={style.Form__buttons}>

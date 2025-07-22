@@ -1,6 +1,6 @@
 import { Icons } from '@/img/icons';
 import style from './Operator.module.scss';
-import {useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {useDispatch} from "react-redux";
 import {removeOperator} from "@/redux/operatorList.ts";
 
@@ -14,6 +14,24 @@ type Props = {
 export const Operator = (props: Props) => {
 	const [ visible, setVisible ] = useState(false);
 	const dispatch = useDispatch();
+	const modalRef= useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if ( modalRef.current == null ) return;
+			if ( event.target == null ) return;
+			if ( !(event.target instanceof Node) ) return;
+			if ( !(modalRef.current.contains(event.target)) && !visible ) {
+				setVisible(false);
+			}
+		}
+
+		document.addEventListener('click', (e: MouseEvent) => handleClickOutside(e), true);
+		return () => {
+			document.removeEventListener('click', (e: MouseEvent) => handleClickOutside(e), true);
+		};
+	}, []);
+
 	return <div className={style.Operator}>
 		<div className={style.Operator__name}>
 			<h1>
@@ -31,15 +49,15 @@ export const Operator = (props: Props) => {
 				<path d="M11 5.35425C11 5.61946 11.1054 5.87382 11.2929 6.06135C11.4804 6.24889 11.7348 6.35425 12 6.35425C12.2652 6.35425 12.5196 6.24889 12.7071 6.06135C12.8946 5.87382 13 5.61946 13 5.35425C13 5.08903 12.8946 4.83468 12.7071 4.64714C12.5196 4.45961 12.2652 4.35425 12 4.35425C11.7348 4.35425 11.4804 4.45961 11.2929 4.64714C11.1054 4.83468 11 5.08903 11 5.35425Z" stroke="#1E1E1E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 			</svg>
 			{ (visible) ?
-				<div className={style.DropDown}>
-				<span onClick={props.changeOperator}>
+				<div className={style.DropDown} ref={modalRef}>
+				<button type={'button'} onClick={props.changeOperator}>
 					<Icons.Change/>
 					Редактировать
-				</span>
-				<span onClick={() => dispatch(removeOperator({name: props.name, email: props.email, id: props.id}))}>
+				</button>
+				<button type={'button'} onClick={() => dispatch(removeOperator({name: props.name, email: props.email, id: props.id}))}>
 					<Icons.Trash/>
 					Удалить
-				</span>
+				</button>
 				</div> : <></> }
 		</div>
 	</div>

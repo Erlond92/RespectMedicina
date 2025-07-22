@@ -13,6 +13,9 @@ export const Calendar: React.FC = () => {
 		}]
 	});
 
+	const randomInt = (min: number, max: number) =>
+		Math.floor(Math.random() * (max - min + 1)) + min;
+
 	useEffect(() => {
 		if (date.year == 3000) {
 			setDateString('Выберите дату');
@@ -69,6 +72,7 @@ export const Calendar: React.FC = () => {
 	}
 
 	const getDayOfYear = (year: number, month: number, day: number)=>  {
+		if (day == -1) return randomInt(0, 10**10);
 		const date = new Date(year, month, day);
 		const startYear = new Date(year, 0, 1);
 		return Math.floor((Number(date) - Number(startYear)) / (1000 * 60 * 60 * 24));
@@ -182,7 +186,7 @@ export const Calendar: React.FC = () => {
 						<tbody>
 							{ listMonth.map((element) => {
 								const days = getMonthDays(date.year, listMonth.indexOf(element)+1);
-								const calendar: string[][] = [];
+								const calendar: number[][] = [];
 								if ( days[0][1] != 1) {
 									for (let i=days[0][1]-1; i>=1; i--) {
 										days.unshift([-1, i]);
@@ -193,38 +197,33 @@ export const Calendar: React.FC = () => {
 										days.push([-1, i]);
 									}
 								}
-								for (let i=0; i<days.length; i++) {
-									const day = (days[i][0] == -1) ? '' : days[i][0].toString();
-									if ( days[i][1] == 1 ) {
-										calendar.push([day]);
-									} else {
-										calendar[Math.floor(i/7)].push(day);
-									}
+								for (let i = 0; i < days.length; i += 7) {
+									calendar.push(days.map((day) => day[0]).slice(i, i + 7));
 								}
-								return <>
+								return <React.Fragment key={element}>
 									<tr className={style.Calendar__table_title}><td ref={(e) => {
 										if (e == null) return ;
 										monthTableRefs.current[listMonth.indexOf(element)] = e
 									}} colSpan={7} >{ element }</td></tr>
 									{ calendar.map((week) => {
-										return <tr ref={(e) => {
+										return <tr key={`${element}+${calendar.indexOf(week)}`} ref={(e) => {
 											if (e == null) return ;
 											monthTableRefs.current[listMonth.indexOf(element)] = e;
-										}} className={style.Calendar__table_day} key={calendar.indexOf(week)} >
-											{ week.map((day) => {return <td scope="row">
+										}} className={style.Calendar__table_day} >
+											{ week.map((day) => {return <td key={getDayOfYear(date.year, listMonth.indexOf(element), Number(day))} scope="row">
 												{
-													(day != '') ?
+													(day != -1) ?
 												<button ref={(e) => {
 													if (!(e)) return ;
 													dayRefs.current[getDayOfYear(date.year, listMonth.indexOf(element), Number(day))] = e;
-												}} onClick={(e) => {onClickDay(e, day, element)}} type={'button'} className={`${style.Calendar__table_button} ${style.Calendar__table_unselect}`}>
+												}} onClick={(e) => {onClickDay(e, day.toString(), element)}} type={'button'} className={`${style.Calendar__table_button} ${style.Calendar__table_unselect}`}>
 													{ day }
 												</button> : '' }
 											</td> })
 											}
 										</tr>
 									}) }
-								</>
+								</React.Fragment>
 							}) }
 						</tbody>
 					</table>

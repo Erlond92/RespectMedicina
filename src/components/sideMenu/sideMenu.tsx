@@ -33,10 +33,10 @@ export const SideMenu: React.FC<Props> = (props) => {
           <Icons.ChartIcon />
           <p>Аналитика</p>
         </Link>
-        <Link to="/medods" className={style.List__line}>
+        <span className={style.List__line}>
           <img src={Images.MeddosImage} alt="иконка" />
           <p>MEDODS</p>
-        </Link>
+        </span>
       </ul>
       <div className={style.Users}>
         <UserAvatar symbol={"B"} />
